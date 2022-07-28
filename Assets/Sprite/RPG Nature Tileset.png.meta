@@ -147,8 +147,8 @@ TextureImporter:
         y: 224
         width: 32
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -11994,15 +11994,15 @@ TextureImporter:
       RPG Nature Tileset_98: -762425014
       RPG Nature Tileset_317: 350813972
       RPG Nature Tileset_363: 258640008
-      RPG Nature Tileset_425: 1928357128
-      RPG Nature Tileset_385: -1959476543
+      RPG Nature Tileset_543: -2068783182
       RPG Nature Tileset_415: -205441097
+      RPG Nature Tileset_385: -1959476543
       RPG Nature Tileset_63: 113732506
       RPG Nature Tileset_384: 492484227
       RPG Nature Tileset_322: -668776288
       RPG Nature Tileset_178: 3019511
       RPG Nature Tileset_440: -1478080568
-      RPG Nature Tileset_543: -2068783182
+      RPG Nature Tileset_425: 1928357128
       RPG Nature Tileset_202: 1177464300
       RPG Nature Tileset_268: -832775553
       RPG Nature Tileset_479: 1444977337
