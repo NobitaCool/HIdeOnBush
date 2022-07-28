@@ -27,11 +27,7 @@ public class PatroEnemy : MonoBehaviour
         }
         else
         {
-            //if(once == false)
-            //{
-            //    once = true;
-            //    StartCoroutine(Wait());
-            //}
+            
             Invoke("Wait2", waitTime);        
             
         }
@@ -49,17 +45,5 @@ public class PatroEnemy : MonoBehaviour
         }
     }
 
-    IEnumerator Wait()
-    {
-        if(currentPointIndex < patroPoints.Length - 1)
-        {
-            currentPointIndex++;
-        }
-        else
-        {
-            currentPointIndex = 0;
-        }
-        yield return new WaitForSeconds(waitTime);
-        
-    }
+    
 }
