@@ -31,7 +31,7 @@ public class TreeBehaviour : MonoBehaviour
             if (!other.gameObject.CompareTag(PLAYER_TAG)) return;
 
             // Spawn cây 
-            Instantiate(effect, transform.position, Quaternion.identity);
+            // Instantiate(effect, transform.position, Quaternion.identity);
             tree.SetActive(isReborn);
 
             // Xóa gốc 

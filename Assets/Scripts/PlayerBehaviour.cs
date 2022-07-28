@@ -5,20 +5,24 @@ using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    private BoxCollider2D boxCollider2D;
-    private Vector3 moveDelta;
-    private RaycastHit2D hit;
-    public Joystick joystick;
-    private SpriteRenderer playerRender;
-    private Sprite playerSprite, treeSprite;
-    private void Start()
+    #region Variable
+        #region private
+            [SerializeField] private BoxCollider2D boxCollider2D;
+            [SerializeField] private Vector3 moveDelta;
+            [SerializeField] private RaycastHit2D hit;
+            [SerializeField] private GameObject playerSprite;
+            [SerializeField] private GameObject treeSprite;
+            private bool isMoving;
+        #endregion
+        #region public
+            public Joystick joystick;
+        #endregion
+    #endregion
+    
+    
+    private void OnValidate()
     {
         boxCollider2D = GetComponent<BoxCollider2D>();
-        playerRender = GetComponent<SpriteRenderer>();
-
-        playerSprite = Resources.Load<Sprite>("Player");
-        treeSprite = Resources.Load<Sprite>("TreeSprite");
-        playerRender.sprite = playerSprite;
     }
     // Update is called once per frame
     private void FixedUpdate()
@@ -29,23 +33,16 @@ public class PlayerBehaviour : MonoBehaviour
         //reset MoveDelta
         moveDelta = new Vector3(x, y, 0);
 
+        isMoving = (moveDelta == Vector3.zero)? false : true;
+
         //Swap sprite direction when going left or right
         //Swap sprite render when stay still or moving
-        if (moveDelta.x > 0)
-        {
-            playerRender.sprite = playerSprite;
-            transform.localScale = Vector3.one;
-        }
-        else if (moveDelta.x < 0)
-        {
-            playerRender.sprite = playerSprite;
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
-        else if(moveDelta.x==0)
-        {
-            playerRender.sprite = treeSprite;
-        }
+        playerSprite.SetActive(isMoving);
+        treeSprite.SetActive(!isMoving);
 
+        if(!isMoving) return;
+        
+        transform.localScale = (moveDelta.x > 0) ? Vector3.one : new Vector3(-1, 1, 1);
 
         //Draw racycast to check for collider
         hit = Physics2D.BoxCast(transform.position, boxCollider2D.size, 0, new Vector2(0, moveDelta.y), Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
