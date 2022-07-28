@@ -14,21 +14,28 @@ public class TreeBehaviour : MonoBehaviour
 
         // Hiệu ứng
         [SerializeField] private ParticleSystem effect;
+
+        // Tái sinh chưa?
+        [SerializeField] private bool isReborn = false;
+
+        // Player tag name
+        private const string PLAYER_TAG = "Player";
         #endregion
     #endregion
 
     #region Function
         void OnTriggerEnter2D(Collider2D other)
         {
+            isReborn = !isReborn;
             // Condition: !player do nothing
-            if (!other.GetComponent<PlayerBehaviour>()) return;
+            if (!other.gameObject.CompareTag(PLAYER_TAG)) return;
 
             // Spawn cây 
             Instantiate(effect, transform.position, Quaternion.identity);
-            Instantiate(tree, transform.position, Quaternion.identity);
+            tree.SetActive(isReborn);
 
             // Xóa gốc 
-            Destroy(stump);
+            stump.SetActive(!isReborn);
         }
     #endregion
 
