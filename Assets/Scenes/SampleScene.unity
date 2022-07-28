@@ -1115,6 +1115,11 @@ MonoBehaviour:
   lookAt: {fileID: 1834527585}
   boundX: 0.15
   boundY: 0.05
+--- !u!1 &671037992 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8355069056468197963, guid: 84879cf45bd06d84ebce40583800ef39, type: 3}
+  m_PrefabInstance: {fileID: 8355069057228966165}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1318627399
 GameObject:
   m_ObjectHideFlags: 0
@@ -4432,6 +4437,14 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 483625757}
+    - target: {fileID: 8355069056468197962, guid: 84879cf45bd06d84ebce40583800ef39, type: 3}
+      propertyPath: treeSprite
+      value: 
+      objectReference: {fileID: 671037992}
+    - target: {fileID: 8355069056468197962, guid: 84879cf45bd06d84ebce40583800ef39, type: 3}
+      propertyPath: playerSprite
+      value: 
+      objectReference: {fileID: 671037992}
     - target: {fileID: 8355069056468197963, guid: 84879cf45bd06d84ebce40583800ef39, type: 3}
       propertyPath: m_Name
       value: Player

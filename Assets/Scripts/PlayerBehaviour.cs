@@ -13,6 +13,7 @@ public class PlayerBehaviour : MonoBehaviour
             [SerializeField] private GameObject playerSprite;
             [SerializeField] private GameObject treeSprite;
             private bool isMoving;
+            private float opacity;
         #endregion
         #region public
             public Joystick joystick;
@@ -35,13 +36,16 @@ public class PlayerBehaviour : MonoBehaviour
 
         isMoving = (moveDelta == Vector3.zero)? false : true;
 
-        //Swap sprite direction when going left or right
-        //Swap sprite render when stay still or moving
-        playerSprite.SetActive(isMoving);
-        treeSprite.SetActive(!isMoving);
+        // Biến thành cây
+        // playerSprite.SetActive(isMoving);
+        // treeSprite.SetActive(!isMoving);
+
+        // Tàng hình
+        opacity = isMoving? 1.0f : 0.4f;
+        playerSprite.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, opacity); 
 
         if(!isMoving) return;
-        
+
         transform.localScale = (moveDelta.x > 0) ? Vector3.one : new Vector3(-1, 1, 1);
 
         //Draw racycast to check for collider
