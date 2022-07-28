@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+[SerializeField]
 public class PlayerBehaviour : MonoBehaviour
 {
     private BoxCollider2D boxCollider2D;
     private Vector3 moveDelta;
     private RaycastHit2D hit;
     public Joystick joystick;
-    private SpriteRenderer playerRender;
-    private Sprite playerSprite, treeSprite;
+    [SerializeField] SpriteRenderer playerRender;
+    [SerializeField] Sprite playerSprite, treeSprite;
     private void Start()
     {
         boxCollider2D = GetComponent<BoxCollider2D>();

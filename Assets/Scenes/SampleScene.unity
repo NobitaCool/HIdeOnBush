@@ -4324,6 +4324,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8355069056468198004, guid: 84879cf45bd06d84ebce40583800ef39, type: 3}
   m_PrefabInstance: {fileID: 8355069057228966165}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &1834527588 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8355069056468198005, guid: 84879cf45bd06d84ebce40583800ef39, type: 3}
+  m_PrefabInstance: {fileID: 8355069057228966165}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5597965237894373523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4432,6 +4437,18 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 483625757}
+    - target: {fileID: 8355069056468197962, guid: 84879cf45bd06d84ebce40583800ef39, type: 3}
+      propertyPath: treeSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f81e9dc54bfc4734f87cb6b408a8af7f, type: 2}
+    - target: {fileID: 8355069056468197962, guid: 84879cf45bd06d84ebce40583800ef39, type: 3}
+      propertyPath: playerRender
+      value: 
+      objectReference: {fileID: 1834527588}
+    - target: {fileID: 8355069056468197962, guid: 84879cf45bd06d84ebce40583800ef39, type: 3}
+      propertyPath: playerSprite
+      value: 
+      objectReference: {fileID: 2023572763, guid: e7ed8632389b66949b4dce44139f08ae, type: 3}
     - target: {fileID: 8355069056468197963, guid: 84879cf45bd06d84ebce40583800ef39, type: 3}
       propertyPath: m_Name
       value: Player
