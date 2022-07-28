@@ -42,7 +42,8 @@ public class PlayerBehaviour : MonoBehaviour
 
         // Tàng hình
         opacity = isMoving? 1.0f : 0.4f;
-        playerSprite.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, opacity); 
+        playerSprite.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, opacity);
+        gameObject.GetComponent<Collider2D>().enabled = isMoving; 
 
         if(!isMoving) return;
 
