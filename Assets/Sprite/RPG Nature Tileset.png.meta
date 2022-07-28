@@ -140,13 +140,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TreeTile01
+      name: TreeSprite
       rect:
         serializedVersion: 2
         x: 0
-        y: 272
-        width: 16
-        height: 16
+        y: 224
+        width: 32
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -11994,15 +11994,15 @@ TextureImporter:
       RPG Nature Tileset_98: -762425014
       RPG Nature Tileset_317: 350813972
       RPG Nature Tileset_363: 258640008
-      RPG Nature Tileset_543: -2068783182
-      RPG Nature Tileset_415: -205441097
+      RPG Nature Tileset_425: 1928357128
       RPG Nature Tileset_385: -1959476543
+      RPG Nature Tileset_415: -205441097
       RPG Nature Tileset_63: 113732506
       RPG Nature Tileset_384: 492484227
       RPG Nature Tileset_322: -668776288
       RPG Nature Tileset_178: 3019511
       RPG Nature Tileset_440: -1478080568
-      RPG Nature Tileset_425: 1928357128
+      RPG Nature Tileset_543: -2068783182
       RPG Nature Tileset_202: 1177464300
       RPG Nature Tileset_268: -832775553
       RPG Nature Tileset_479: 1444977337
@@ -12018,6 +12018,7 @@ TextureImporter:
       RPG Nature Tileset_215: -1080413845
       RPG Nature Tileset_106: -694821463
       RPG Nature Tileset_347: -832453860
+      TreeSprite: 1298296799
       RPG Nature Tileset_81: 1542421544
       RPG Nature Tileset_341: 701835278
       RPG Nature Tileset_287: 1110388478
@@ -12419,7 +12420,6 @@ TextureImporter:
       RPG Nature Tileset_285: -938448981
       RPG Nature Tileset_293: -1248009866
       RPG Nature Tileset_56: -1497798564
-      TreeTile01: 1298296799
       RPG Nature Tileset_24: -995591157
       RPG Nature Tileset_365: 1192424741
       RPG Nature Tileset_25: -1757449957
