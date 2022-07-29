@@ -5,26 +5,28 @@ using UnityEngine.AI;
 
 public class EnemyBehaviour : MonoBehaviour
 {
-    [SerializeField] private float speed;
-    [SerializeField] private Transform[] points;
-    [SerializeField] private int curIndex = 0;
-    [SerializeField] private float waitTime;
-    [SerializeField] private Collider2D visible;
-    [SerializeField] private Collider2D player;
-    [SerializeField] private bool isChasing = false;
-    [SerializeField] private NavMeshAgent navMesh;
-    private void Start()
-    {
-        navMesh = GetComponent<NavMeshAgent>();
-        navMesh.updateRotation = false;
-        navMesh.updateUpAxis = false;
-    }
+    #region Variable
+        #region movement
+            [SerializeField] private float speed;            
+            [SerializeField] private float waitTime;
+            [SerializeField] private Collider2D visible;
+            [SerializeField] private Collider2D player;
+            [SerializeField] private bool isChasing = false;
+            [SerializeField] private NavMeshAgent navMesh;
+        #endregion
+
+        #region destination
+            [SerializeField] private Transform[] points;
+            [SerializeField] private int curIndex = 0;
+    #endregion
+    #endregion
+    private void OnValidate() => navMesh = GetComponent<NavMeshAgent>();
 
     private void Update()
     {
-        if(!isChasing) Patrolling();
+        if (!isChasing) Patrolling();
 
-        if(isChasing) Chasing();
+        if (isChasing) Chasing();
     }
 
     private void UpdateDestination() => curIndex = (curIndex < points.Length - 1) ? ++curIndex : 0;
@@ -33,12 +35,16 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void Patrolling()
     {
+        // di chuyển thông thường
         transform.position = Vector2.MoveTowards(transform.position, points[curIndex].position, speed * Time.deltaTime);
 
-        if(transform.position != points[curIndex].position) return;
+        // di chuyển AI
+        // navMesh.SetDestination(points[curIndex].position);
+
+        if (transform.position != points[curIndex].position) return;
 
         Invoke(nameof(UpdateDestination), waitTime);
 
-        isChasing = visible.IsTouching(player)? true : false;
+        isChasing = visible.IsTouching(player) ? true : false;
     }
 }
