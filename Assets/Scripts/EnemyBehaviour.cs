@@ -27,7 +27,7 @@ public class EnemyBehaviour : MonoBehaviour
         navMesh.updateUpAxis = false;
     }         
 
-        private void Update()
+    private void Update()
     {
         if (!isChasing) Patrolling();
 
