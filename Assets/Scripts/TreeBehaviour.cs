@@ -26,7 +26,7 @@ public class TreeBehaviour : MonoBehaviour
     #region Function
         void OnTriggerEnter2D(Collider2D other)
         {
-            isReborn = !isReborn;
+            isReborn = true;
             // Condition: !player do nothing
             if (!other.gameObject.CompareTag(PLAYER_TAG)) return;
 
