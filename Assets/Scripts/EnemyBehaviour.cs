@@ -20,9 +20,15 @@ public class EnemyBehaviour : MonoBehaviour
             [SerializeField] private int curIndex = 0;
     #endregion
     #endregion
-    private void OnValidate() => navMesh = GetComponent<NavMeshAgent>();
+    private void OnValidate()
+    {
+        navMesh = GetComponent<NavMeshAgent>();
+        navMesh.updateRotation = false;
+        navMesh.updateUpAxis = false;
+    }
 
-    private void Update()
+
+        private void Update()
     {
         if (!isChasing) Patrolling();
 

@@ -110,13 +110,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  points: []
-  curIndex: 0
   waitTime: 0
   visible: {fileID: 7112053476135807157}
-  player: {fileID: 0}
+  player: {fileID: 8355069056468198007, guid: 84879cf45bd06d84ebce40583800ef39, type: 3}
   isChasing: 0
   navMesh: {fileID: 7112053477744928217}
+  points: []
+  curIndex: 0
 --- !u!195 &7112053477744928217
 NavMeshAgent:
   m_ObjectHideFlags: 0
