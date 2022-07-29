@@ -20,13 +20,12 @@ public class EnemyBehaviour : MonoBehaviour
             [SerializeField] private int curIndex = 0;
     #endregion
     #endregion
-    private void OnValidate()
+    private void OnValidate() 
     {
         navMesh = GetComponent<NavMeshAgent>();
         navMesh.updateRotation = false;
         navMesh.updateUpAxis = false;
-    }
-
+    }         
 
         private void Update()
     {
