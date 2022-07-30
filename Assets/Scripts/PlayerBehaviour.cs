@@ -12,11 +12,15 @@ public class PlayerBehaviour : MonoBehaviour
             [SerializeField] private RaycastHit2D hit;
             [SerializeField] private GameObject playerSprite;
             [SerializeField] private GameObject treeSprite;
+            [SerializeField] private Animator playerAnim;
             private bool isMoving;
-            private float opacity;
+            private bool isRunning;
         #endregion
         #region public
             public Joystick joystick;
+        #endregion
+        #region const
+            private const float RUN_SPEED = 0.84f;
         #endregion
     #endregion
     
@@ -24,6 +28,7 @@ public class PlayerBehaviour : MonoBehaviour
     private void OnValidate()
     {
         boxCollider2D = GetComponent<BoxCollider2D>();
+        playerAnim = GetComponentInChildren<Animator>();
     }
     // Update is called once per frame
     private void FixedUpdate()
@@ -37,30 +42,27 @@ public class PlayerBehaviour : MonoBehaviour
         isMoving = (moveDelta == Vector3.zero)? false : true;
 
         // Biến thành cây
-        // playerSprite.SetActive(isMoving);
-        // treeSprite.SetActive(!isMoving);
+        playerSprite.SetActive(isMoving);
+        treeSprite.SetActive(!isMoving);
 
-        // Tàng hình
-        opacity = isMoving? 1.0f : 0.4f;
-        playerSprite.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, opacity);
         gameObject.GetComponent<Collider2D>().enabled = isMoving; 
 
         if(!isMoving) return;
 
         transform.localScale = (moveDelta.x > 0) ? Vector3.one : new Vector3(-1, 1, 1);
 
-        //Draw racycast to check for collider
-        hit = Physics2D.BoxCast(transform.position, boxCollider2D.size, 0, new Vector2(0, moveDelta.y), Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
-        if (hit.collider == null)
-        {
-            transform.Translate(0,moveDelta.y*Time.deltaTime,0);
-        }
+        isRunning = (Mathf.Sqrt(moveDelta.x * moveDelta.x + moveDelta.y * moveDelta.y) >= RUN_SPEED)? true : false;
+        
+        // Tạo animation run
+        playerAnim.SetBool("isRunning", isRunning);
+
+        hit = Physics2D.BoxCast(transform.position, boxCollider2D.size, 0, new Vector2(0, moveDelta.y), Mathf.Abs(moveDelta.x * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
+        if (hit.collider != null) return;
 
         hit = Physics2D.BoxCast(transform.position, boxCollider2D.size, 0, new Vector2(moveDelta.x,0), Mathf.Abs(moveDelta.x * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
-        if (hit.collider == null)
-        {
-            transform.Translate(moveDelta.x*Time.deltaTime, 0, 0);
-        }
+        if (hit.collider != null) return;
+ 
+        transform.Translate(moveDelta*Time.deltaTime);
 
     }
 }
