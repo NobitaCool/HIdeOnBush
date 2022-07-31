@@ -13,17 +13,18 @@ public class PlayerBehaviour : MonoBehaviour
             [SerializeField] private GameObject playerSprite;
             [SerializeField] private GameObject treeSprite;
             [SerializeField] private Animator playerAnim;
-            private bool isMoving;
-            private bool isRunning;
+            private bool isMoving = false;
+            private bool isRunning = false;
+            [SerializeField] private bool isDead = false;
         #endregion
         #region public
             public Joystick joystick;
         #endregion
         #region const
             private const float RUN_SPEED = 0.84f;
+            private const string ENEMY_TAG = "Enemy";
         #endregion
     #endregion
-    
     
     private void OnValidate()
     {
@@ -32,6 +33,12 @@ public class PlayerBehaviour : MonoBehaviour
     }
     // Update is called once per frame
     private void FixedUpdate()
+    {
+        if(isDead) return;
+        MoveMent();
+    }
+
+    private void MoveMent()
     {
         float x = joystick.Horizontal;
         float y = joystick.Vertical;
@@ -63,6 +70,12 @@ public class PlayerBehaviour : MonoBehaviour
         if (hit.collider != null) return;
  
         transform.Translate(moveDelta*Time.deltaTime);
+    }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(!other.gameObject.CompareTag(ENEMY_TAG)) return;
+
+        isDead = true;
     }
 }
