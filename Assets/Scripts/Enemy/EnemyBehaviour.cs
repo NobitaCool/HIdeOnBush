@@ -42,19 +42,22 @@ public class EnemyBehaviour : MonoBehaviour
         if (!isChasing) Patrolling();     
 
         if (isChasing) Chasing();
+
+        PlayAnimation();
     }
 
     private void UpdateDestination() => curIndex = (curIndex < points.Length - 1) ? ++curIndex : 0;
 
-    private void Chasing() => navMesh.SetDestination(player.gameObject.transform.position);
+    public void Chasing() 
+    {
+        isChasing = true;
+        navMesh.SetDestination(player.gameObject.transform.position);
+    }
 
     private void Patrolling()
     {
         // di chuyển thông thường
         transform.position = Vector2.MoveTowards(transform.position, points[curIndex].position, speed * Time.deltaTime);  
-
-        // PlayAnimation();
-        PlayAnimation();
 
         if (transform.position != points[curIndex].position) return;
 
@@ -64,9 +67,9 @@ public class EnemyBehaviour : MonoBehaviour
         lastTime = Time.time;
 
         // phát hiện player
-        isChasing = visible.IsTouching(player) ? true : false;
+        // isChasing = visible.IsTouching(player) ? true : false;
 
-        if(isChasing) visible.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.6f);
+        // isChasing = visible.IsTouchingLayers(3) ? true : false;
     }
 
     private void PlayAnimation()
@@ -91,5 +94,8 @@ public class EnemyBehaviour : MonoBehaviour
         if(isMovingRight) angle *= -1;
 
         visible.gameObject.transform.eulerAngles = Vector3.forward * angle;   
+
+        if(isChasing) visible.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.6f);
     }
+
 }
