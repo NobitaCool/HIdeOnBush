@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd7c26d59b5f9404db3c60cb29e5c45d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookAt: {fileID: 0}
+  lookAt: {fileID: 861856193}
   boundX: 0.15
   boundY: 0.05
 --- !u!1001 &426661170
@@ -405,6 +405,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 100436948692228841, guid: b203b4c1fa874b643a29e8e8975386f4, type: 3}
   m_PrefabInstance: {fileID: 929537547}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &861856193 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4872056157576901773, guid: 84879cf45bd06d84ebce40583800ef39, type: 3}
+  m_PrefabInstance: {fileID: 4872056157726322386}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &929537547
 PrefabInstance:
@@ -19744,21 +19749,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c059a18cdfc04594dadff3e6d5d205ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectedPlayer:
+  DetectedPlayer:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1958607144}
-        m_TargetAssemblyTypeName: EnemyBehaviour, Assembly-CSharp
-        m_MethodName: Chasing
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1865742048
 GameObject:
   m_ObjectHideFlags: 0
@@ -44647,17 +44640,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 100436948692228841, guid: b203b4c1fa874b643a29e8e8975386f4, type: 3}
   m_PrefabInstance: {fileID: 1956218171}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1958607144 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6272868454003965145, guid: a20141f7c9f518045847063d8d0a2580, type: 3}
-  m_PrefabInstance: {fileID: 1108411311}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 057696c41c37a0d489eb1dba9cf8232f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1988330096
 GameObject:
   m_ObjectHideFlags: 0
