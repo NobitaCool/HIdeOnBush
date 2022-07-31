@@ -78,6 +78,7 @@ public class EnemyBehaviour : MonoBehaviour
         isMovingRight = (Vector3.Angle(direction, Vector3.right) == 0)? true : false;
 
         isMovingUP = (Vector3.Angle(direction, Vector3.up) == 0)? true : false;
+       
 
         enemyAnim.SetBool("isHorizontal", isHorizontal);
 
