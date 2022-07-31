@@ -63,7 +63,7 @@ public class EnemyBehaviour : MonoBehaviour
 
         if(Time.time - lastTime < waitTime) return; 
         
-        UpdateDestination();
+        UpdateDestination();    
         lastTime = Time.time;
     }
 
