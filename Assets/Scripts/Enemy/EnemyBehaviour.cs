@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Events;
 
 public class EnemyBehaviour : MonoBehaviour
 {
@@ -14,6 +13,7 @@ public class EnemyBehaviour : MonoBehaviour
             [SerializeField] private Collider2D player;
             [SerializeField] private bool isChasing = false;
             [SerializeField] private NavMeshAgent navMesh;
+
             private float lastTime;
             private bool isMovingRight;
             private bool isMovingUP;
@@ -34,7 +34,6 @@ public class EnemyBehaviour : MonoBehaviour
         navMesh = GetComponent<NavMeshAgent>();
         navMesh.updateRotation = false;
         navMesh.updateUpAxis = false;
-
         enemyAnim = GetComponentInChildren<Animator>();
     }         
 
@@ -66,6 +65,11 @@ public class EnemyBehaviour : MonoBehaviour
         
         UpdateDestination();
         lastTime = Time.time;
+
+        // phát hiện player
+        // isChasing = visible.IsTouching(player) ? true : false;
+
+        // isChasing = visible.IsTouchingLayers(3) ? true : false;
     }
 
     private void PlayAnimation()

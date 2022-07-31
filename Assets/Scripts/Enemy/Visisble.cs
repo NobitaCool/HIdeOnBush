@@ -5,20 +5,12 @@ using UnityEngine.Events;
 
 public class Visisble : MonoBehaviour
 {
-    #region Variable
-        #region event
-            public UnityEvent DetectedPlayer;
-        #endregion
-        #region const
-            private const string PLAYER_TAG = "Player";
-        #endregion
-    #endregion
-   
+    public UnityEvent detectedPlayer;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(!other.gameObject.CompareTag(PLAYER_TAG)) return;
+        if(!other.gameObject.CompareTag("Player")) return;
                
-        DetectedPlayer.Invoke();
+        detectedPlayer.Invoke();
     }
 }

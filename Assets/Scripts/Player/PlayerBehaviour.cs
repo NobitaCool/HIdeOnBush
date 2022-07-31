@@ -13,9 +13,9 @@ public class PlayerBehaviour : MonoBehaviour
             [SerializeField] private GameObject playerSprite;
             [SerializeField] private GameObject treeSprite;
             [SerializeField] private Animator playerAnim;
-            private bool isMoving = false;
-            private bool isRunning = false;
-            [SerializeField] private bool isDead = false;
+            private bool isMoving;
+            private bool isRunning;
+            private bool isDead;
         #endregion
         #region public
             public Joystick joystick;
@@ -26,6 +26,7 @@ public class PlayerBehaviour : MonoBehaviour
         #endregion
     #endregion
     
+    
     private void OnValidate()
     {
         boxCollider2D = GetComponent<BoxCollider2D>();
@@ -35,6 +36,7 @@ public class PlayerBehaviour : MonoBehaviour
     private void FixedUpdate()
     {
         if(isDead) return;
+        
         MoveMent();
     }
 
