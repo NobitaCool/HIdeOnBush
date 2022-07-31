@@ -55,6 +55,7 @@ public class EnemyBehaviour : MonoBehaviour
         isMovingRight = (Vector3.Angle(direction, Vector3.right) == 0)? true : false;
 
         isMovingUP = (Vector3.Angle(direction, Vector3.up) == 0)? true : false;
+       
 
         if(Vector3.Angle(direction, Vector3.right) % 180 == 0)
         {
