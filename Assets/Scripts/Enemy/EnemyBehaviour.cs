@@ -65,11 +65,6 @@ public class EnemyBehaviour : MonoBehaviour
         
         UpdateDestination();
         lastTime = Time.time;
-
-        // phát hiện player
-        // isChasing = visible.IsTouching(player) ? true : false;
-
-        // isChasing = visible.IsTouchingLayers(3) ? true : false;
     }
 
     private void PlayAnimation()
@@ -81,8 +76,7 @@ public class EnemyBehaviour : MonoBehaviour
 
         isMovingRight = (Vector3.Angle(direction, Vector3.right) == 0)? true : false;
 
-        isMovingUP = (Vector3.Angle(direction, Vector3.up) == 0)? true : false;
-       
+        isMovingUP = (Vector3.Angle(direction, Vector3.up) == 0)? true : false;      
 
         enemyAnim.SetBool("isHorizontal", isHorizontal);
 

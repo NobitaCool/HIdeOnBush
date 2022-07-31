@@ -36,8 +36,9 @@ public class PlayerBehaviour : MonoBehaviour
     private void FixedUpdate()
     {
         if(isDead) return;
-        
-        MoveMent();
+
+        MoveMent(); 
+
     }
 
     private void MoveMent()
@@ -61,7 +62,7 @@ public class PlayerBehaviour : MonoBehaviour
         transform.localScale = (moveDelta.x > 0) ? Vector3.one : new Vector3(-1, 1, 1);
 
         isRunning = (Mathf.Sqrt(moveDelta.x * moveDelta.x + moveDelta.y * moveDelta.y) >= RUN_SPEED)? true : false;
-        
+
         // Tạo animation run
         playerAnim.SetBool("isRunning", isRunning);
 
@@ -76,8 +77,12 @@ public class PlayerBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if(isDead) return;
+        
         if(!other.gameObject.CompareTag(ENEMY_TAG)) return;
 
         isDead = true;
+
+        playerAnim.SetTrigger("isDead");
     }
 }
