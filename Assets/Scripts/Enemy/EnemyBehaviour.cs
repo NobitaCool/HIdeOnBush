@@ -46,7 +46,15 @@ public class EnemyBehaviour : MonoBehaviour
         PlayAnimation();
     }
 
-    private void UpdateDestination() => curIndex = (curIndex < points.Length - 1) ? ++curIndex : 0;
+    private void UpdateDestination() 
+    {
+        if (curIndex < points.Length - 1) curIndex++;
+        else 
+        {
+            System.Array.Reverse(points);
+            curIndex = 0;
+        }
+    }
 
     public void Chasing() 
     {

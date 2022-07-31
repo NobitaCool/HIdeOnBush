@@ -13,6 +13,7 @@ public class PlayerBehaviour : MonoBehaviour
             [SerializeField] private GameObject playerSprite;
             [SerializeField] private GameObject treeSprite;
             [SerializeField] private Animator playerAnim;
+            [SerializeField] private Rigidbody2D playerRb;
             private bool isMoving;
             private bool isRunning;
             private bool isDead;
@@ -21,8 +22,10 @@ public class PlayerBehaviour : MonoBehaviour
             public Joystick joystick;
         #endregion
         #region const
-            private const float RUN_SPEED = 0.84f;
+            private const float RUN_SPEED = 0.95f;
+            private const float ICE_FORCE = 25.0f;
             private const string ENEMY_TAG = "Enemy";
+            private const string ICE_TAG = "Ice";
         #endregion
     #endregion
     
@@ -31,6 +34,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         boxCollider2D = GetComponent<BoxCollider2D>();
         playerAnim = GetComponentInChildren<Animator>();
+        playerRb = GetComponent<Rigidbody2D>();
     }
     // Update is called once per frame
     private void FixedUpdate()
@@ -76,9 +80,14 @@ public class PlayerBehaviour : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other)
-    {
+    {      
         if(isDead) return;
-        
+
+        if(other.gameObject.CompareTag(ICE_TAG))
+        {
+            playerRb.AddForce(moveDelta.normalized * Time.deltaTime * ICE_FORCE, ForceMode2D.Impulse);
+        }
+
         if(!other.gameObject.CompareTag(ENEMY_TAG)) return;
 
         isDead = true;
