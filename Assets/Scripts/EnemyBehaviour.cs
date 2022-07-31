@@ -13,8 +13,11 @@ public class EnemyBehaviour : MonoBehaviour
             [SerializeField] private Collider2D player;
             [SerializeField] private bool isChasing = false;
             [SerializeField] private NavMeshAgent navMesh;
+
+            private float lastTime;
             private bool isMovingRight;
             private bool isMovingUP;
+            private bool isHorizontal;
         #endregion
 
         #region destination
@@ -36,7 +39,7 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void Update()
     {
-        if (!isChasing) Patrolling();
+        if (!isChasing) Patrolling();     
 
         if (isChasing) Chasing();
     }
@@ -48,37 +51,45 @@ public class EnemyBehaviour : MonoBehaviour
     private void Patrolling()
     {
         // di chuyển thông thường
-        transform.position = Vector2.MoveTowards(transform.position, points[curIndex].position, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, points[curIndex].position, speed * Time.deltaTime);  
+
+        // PlayAnimation();
+        PlayAnimation();
+
+        if (transform.position != points[curIndex].position) return;
+
+        if(Time.time - lastTime < waitTime) return; 
         
-        Vector3 direction = points[curIndex].position - transform.position;     
+        UpdateDestination();
+        lastTime = Time.time;
+
+        // phát hiện player
+        isChasing = visible.IsTouching(player) ? true : false;
+
+        if(isChasing) visible.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.6f);
+    }
+
+    private void PlayAnimation()
+    {
+        // Tìm hướng
+        Vector3 direction = points[curIndex].position - transform.position;
+
+        isHorizontal = (Vector3.Angle(direction, Vector3.right) % 180 == 0)? true : false;
 
         isMovingRight = (Vector3.Angle(direction, Vector3.right) == 0)? true : false;
 
         isMovingUP = (Vector3.Angle(direction, Vector3.up) == 0)? true : false;
 
-        if(Vector3.Angle(direction, Vector3.right) % 180 == 0)
-        {
-            enemyAnim.SetBool("isHorizontal", true);
-            enemyAnim.SetBool("isMovingRight", isMovingRight);           
-        }
-        else
-        {
-            enemyAnim.SetBool("isHorizontal", false);
-            enemyAnim.SetBool("isMovingUp", isMovingUP);
-        }   
+        enemyAnim.SetBool("isHorizontal", isHorizontal);
 
-        var angle = Vector3.Angle(direction, Vector3.up);  
+        enemyAnim.SetBool("isMovingRight", isMovingRight);
+           
+        enemyAnim.SetBool("isMovingUp", isMovingUP);    
+
+        var angle = Vector3.Angle(direction, Vector3.up); 
 
         if(isMovingRight) angle *= -1;
 
-        visible.gameObject.transform.eulerAngles = Vector3.forward * angle;
-
-        if (transform.position != points[curIndex].position) return;
-
-        Invoke(nameof(UpdateDestination), waitTime);
-
-        isChasing = visible.IsTouching(player) ? true : false;
-
-        if(isChasing) visible.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.6f);
+        visible.gameObject.transform.eulerAngles = Vector3.forward * angle;   
     }
 }
