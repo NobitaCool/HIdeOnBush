@@ -23,7 +23,7 @@ public class PlayerBehaviour : MonoBehaviour
         #endregion
         #region const
             private const float RUN_SPEED = 0.95f;
-            private const float ICE_FORCE = 25.0f;
+            private const float ICE_FORCE = 30.0f;
             private const string ENEMY_TAG = "Enemy";
             private const string ICE_TAG = "Ice";
         #endregion
@@ -70,12 +70,9 @@ public class PlayerBehaviour : MonoBehaviour
         // Tạo animation run
         playerAnim.SetBool("isRunning", isRunning);
 
-        hit = Physics2D.BoxCast(transform.position, boxCollider2D.size, 0, new Vector2(0, moveDelta.y), Mathf.Abs(moveDelta.x * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
+        hit = Physics2D.BoxCast(transform.position, boxCollider2D.size, 0, new Vector2(moveDelta.x,moveDelta.y), .1f, LayerMask.GetMask("Actor", "Blocking"));
         if (hit.collider != null) return;
-
-        hit = Physics2D.BoxCast(transform.position, boxCollider2D.size, 0, new Vector2(moveDelta.x,0), Mathf.Abs(moveDelta.x * Time.deltaTime), LayerMask.GetMask("Actor", "Blocking"));
-        if (hit.collider != null) return;
- 
+        
         transform.Translate(moveDelta*Time.deltaTime);
     }
 
