@@ -70,10 +70,12 @@ public class PlayerBehaviour : MonoBehaviour
         // Tạo animation run
         playerAnim.SetBool("isRunning", isRunning);
 
-        hit = Physics2D.BoxCast(transform.position, boxCollider2D.size, 0, new Vector2(moveDelta.x,moveDelta.y), .1f, LayerMask.GetMask("Actor", "Blocking"));
+        hit = Physics2D.BoxCast(transform.position, boxCollider2D.size, 0, new Vector2(moveDelta.x, moveDelta.y), .1f, LayerMask.GetMask("Actor", "Blocking"));
         if (hit.collider != null) return;
+
+        transform.Translate(moveDelta * Time.deltaTime);
         
-        transform.Translate(moveDelta*Time.deltaTime);
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
