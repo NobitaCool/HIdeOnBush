@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 
 public class PlayerBehaviour : MonoBehaviour
 {
@@ -26,10 +26,15 @@ public class PlayerBehaviour : MonoBehaviour
             private const float ICE_FORCE = 30.0f;
             private const string ENEMY_TAG = "Enemy";
             private const string ICE_TAG = "Ice";
+            private const string GATE_TAG = "Gate";
+        #endregion
+        #region Event
+            public UnityEvent GameOver;
+            public UnityEvent Victory;
         #endregion
     #endregion
-    
-    
+
+
     private void OnValidate()
     {
         boxCollider2D = GetComponent<BoxCollider2D>();
@@ -39,10 +44,9 @@ public class PlayerBehaviour : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        if(isDead) return;
+        if (isDead) return;
 
-        MoveMent(); 
-
+        MoveMent();
     }
 
     private void MoveMent()
@@ -53,42 +57,62 @@ public class PlayerBehaviour : MonoBehaviour
         //reset MoveDelta
         moveDelta = new Vector3(x, y, 0);
 
-        isMoving = (moveDelta == Vector3.zero)? false : true;
+        isMoving = (moveDelta == Vector3.zero) ? false : true;
 
         // Biến thành cây
         playerSprite.SetActive(isMoving);
         treeSprite.SetActive(!isMoving);
 
-        gameObject.GetComponent<Collider2D>().enabled = isMoving; 
+        gameObject.GetComponent<Collider2D>().enabled = isMoving;
 
-        if(!isMoving) return;
+        if (!isMoving) return;
 
         transform.localScale = (moveDelta.x > 0) ? Vector3.one : new Vector3(-1, 1, 1);
 
-        isRunning = (Mathf.Sqrt(moveDelta.x * moveDelta.x + moveDelta.y * moveDelta.y) >= RUN_SPEED)? true : false;
+        isRunning = (Mathf.Sqrt(moveDelta.x * moveDelta.x + moveDelta.y * moveDelta.y) >= RUN_SPEED) ? true : false;
 
         // Tạo animation run
         playerAnim.SetBool("isRunning", isRunning);
 
-        hit = Physics2D.BoxCast(transform.position, boxCollider2D.size, 0, new Vector2(moveDelta.x,moveDelta.y), .1f, LayerMask.GetMask("Actor", "Blocking"));
+        hit = Physics2D.BoxCast(transform.position, boxCollider2D.size, 0, new Vector2(moveDelta.x, moveDelta.y), .1f, LayerMask.GetMask("Actor", "Blocking"));
         if (hit.collider != null) return;
-        
-        transform.Translate(moveDelta*Time.deltaTime);
+
+        transform.Translate(moveDelta * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
-    {      
-        if(isDead) return;
+    {
+        if (isDead) return;
 
-        if(other.gameObject.CompareTag(ICE_TAG))
-        {
-            playerRb.AddForce(moveDelta.normalized * Time.deltaTime * ICE_FORCE, ForceMode2D.Impulse);
-        }
+        SlideOnIce(other);
 
-        if(!other.gameObject.CompareTag(ENEMY_TAG)) return;
+        OnDead(other);
+
+        Survive(other);
+    }
+
+    private void SlideOnIce(Collider2D other)
+    {
+        if (!other.gameObject.CompareTag(ICE_TAG)) return;
+
+        playerRb.AddForce(moveDelta.normalized * Time.deltaTime * ICE_FORCE, ForceMode2D.Impulse);
+    }
+
+    private void OnDead(Collider2D other)
+    {
+        if (!other.gameObject.CompareTag(ENEMY_TAG)) return;
 
         isDead = true;
 
         playerAnim.SetTrigger("isDead");
+
+        GameOver.Invoke();
+    }
+
+    private void Survive(Collider2D other)
+    {
+        if(!other.gameObject.CompareTag(GATE_TAG)) return;
+
+        Victory.Invoke();
     }
 }
