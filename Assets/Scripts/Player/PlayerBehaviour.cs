@@ -78,6 +78,7 @@ public class PlayerBehaviour : MonoBehaviour
         if (hit.collider != null) return;
 
         transform.Translate(moveDelta * Time.deltaTime);
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
