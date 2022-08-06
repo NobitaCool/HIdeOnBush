@@ -15,6 +15,33 @@ EditorBuildSettings:
     path: Assets/Scenes/GameScene/GameSceneLv1/GameSceneLv1.unity
     guid: c1f706baf14c52d43ba14a2ace0bbfca
   - enabled: 1
+    path: Assets/Scenes/GameScene/GameSceneLv2/GameSceneLv2.unity
+    guid: 06d5cf2b7dff41041b80fc3fd8173199
+  - enabled: 1
+    path: Assets/Scenes/GameScene/GameSceneLv3/GameSceneLv3.unity
+    guid: da43aa5bc6be0bc4d8f09ed269e26e55
+  - enabled: 1
+    path: Assets/Scenes/GameScene/GameSceneLv4/GameSceneLv4.unity
+    guid: c8dfdcdc292e27f44a3472d62d124d1c
+  - enabled: 1
+    path: Assets/Scenes/GameScene/GameSceneLv5/GameSceneLv5.unity
+    guid: 2c77f571c60c9e2489f22d8264b419e5
+  - enabled: 1
+    path: Assets/Scenes/GameScene/GameSceneLv6/GameSceneLv6.unity
+    guid: f07e41862c7dd05418efdab6b73a3062
+  - enabled: 1
+    path: Assets/Scenes/GameScene/GameSceneLv7/GameSceneLv7.unity
+    guid: 62a540395db96374c992503eeefbb1bb
+  - enabled: 1
+    path: Assets/Scenes/GameScene/GameSceneLv8/GameSceneLv8.unity
+    guid: 6a19f48bf8c1e0440b34b1e74a820a83
+  - enabled: 1
+    path: Assets/Scenes/GameScene/GameSceneLv9/GameSceneLv9.unity
+    guid: d750c6c1ceb76ae409babd18d58ab913
+  - enabled: 1
+    path: Assets/Scenes/GameScene/GameSceneLv10/GameSceneLv10.unity
+    guid: 44046b7270de06e4eb855e5fa12c0e9d
+  - enabled: 1
     path: Assets/Scenes/MenuScene/LevelScene.unity
     guid: dd169997799d7bc40a12a0b9713aead5
   m_configObjects: {}

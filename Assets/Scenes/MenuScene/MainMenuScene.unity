@@ -243,8 +243,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1101208133}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: LoadGameScene
-        m_Mode: 3
+        m_MethodName: LoadLevelScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1082,7 +1082,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1943033393
 RectTransform:
   m_ObjectHideFlags: 0

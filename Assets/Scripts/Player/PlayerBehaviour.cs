@@ -114,8 +114,6 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if(!other.gameObject.CompareTag(GATE_TAG)) return;
 
-        Debug.Log("haha");
-
         Victory.Invoke();
     }
 }
