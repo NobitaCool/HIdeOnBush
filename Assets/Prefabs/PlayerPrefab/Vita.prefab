@@ -160,6 +160,24 @@ MonoBehaviour:
   playerAnim: {fileID: 4872056157443783225}
   playerRb: {fileID: 4872056157576901808}
   joystick: {fileID: 0}
+  GameOver:
+    m_PersistentCalls:
+      m_Calls: []
+  Victory:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5532196045502250573, guid: 1ce7b8562850fc443aa00bfa9a8e0e35, type: 3}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Victory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!50 &4872056157576901808
 Rigidbody2D:
   serializedVersion: 4

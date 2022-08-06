@@ -18,7 +18,6 @@ public class GameManager : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        // int nextLevel = SceneManager.GetActiveScene().buildIndex + 1;
         int nextLevel = PlayerPrefs.GetInt("curLevel") + 1;
 
         if(nextLevel > TOTAL_LEVEL)
@@ -31,6 +30,8 @@ public class GameManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("curLevel", nextLevel);
         }
+
+        LoadGameScene(nextLevel);
     }
 
     public void GameOver()
@@ -40,6 +41,6 @@ public class GameManager : MonoBehaviour
 
     public void Victory()
     {
-        // DO SOMETHING
+        LoadNextLevel();
     }
 }
