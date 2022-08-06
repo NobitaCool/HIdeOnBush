@@ -14,8 +14,12 @@ public class GameManager : MonoBehaviour
         #region const
             private const int TOTAL_LEVEL = 10;
         #endregion
+        #region Audio
+            [SerializeField] private AudioSource backgroundSound;
+        #endregion
         #region bla blab al
             private bool isPause = false;
+            private bool enableSound = true;
         #endregion
     #endregion
     
@@ -51,6 +55,14 @@ public class GameManager : MonoBehaviour
 
         Time.timeScale = isPause ? 0 : 1;
     }
+
+    public void EnableSound()
+    {
+        enableSound = !enableSound;
+        
+        backgroundSound.enabled = enableSound;
+    }
+
 
     public void GameOver()
     {
