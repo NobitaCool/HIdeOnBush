@@ -5,15 +5,25 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField] private Button[] levelBtns;
+    [SerializeField] private Button[] level_Btns;
+    [SerializeField] private Image[] lock_Btns;
+    private int curLevel;
     void Start() 
     {
-        int curLevel = PlayerPrefs.GetInt("curLevel", 1);
-        for (int i = 0; i < levelBtns.Length; i++)
-        {
-            if (i + 1 > curLevel) levelBtns[i].interactable = false;
-        }
+        curLevel = PlayerPrefs.GetInt("curLevel", 1);
+        UpdateLevel();
     } 
+
+    public void UpdateLevel()
+    {
+        for (int i = 0; i < level_Btns.Length; i++)
+        {
+            if (i + 1 <= curLevel) continue;
+
+            level_Btns[i].interactable = false;
+            lock_Btns[i].enabled = true;
+        }
+    }
 
     public void ResetLevel()
     {
