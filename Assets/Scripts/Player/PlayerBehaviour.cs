@@ -14,12 +14,15 @@ public class PlayerBehaviour : MonoBehaviour
             [SerializeField] private GameObject treeSprite;
             [SerializeField] private Animator playerAnim;
             [SerializeField] private Rigidbody2D playerRb;
-            private bool isMoving;
+            [SerializeField] private AudioSource Step;
+            [SerializeField] private AudioSource SoundDead;
+    private bool isMoving;
             private bool isRunning;
             private bool isDead;
-        #endregion
-        #region public
-            public Joystick joystick;
+    
+    #endregion
+    #region public
+    public Joystick joystick;
         #endregion
         #region const
             private const float RUN_SPEED = 0.95f;
@@ -40,6 +43,8 @@ public class PlayerBehaviour : MonoBehaviour
         boxCollider2D = GetComponent<BoxCollider2D>();
         playerAnim = GetComponentInChildren<Animator>();
         playerRb = GetComponent<Rigidbody2D>();
+        Step = GetComponent<AudioSource>();
+        
     }
     // Update is called once per frame
     private void FixedUpdate()
@@ -66,6 +71,7 @@ public class PlayerBehaviour : MonoBehaviour
         gameObject.GetComponent<Collider2D>().enabled = isMoving;
 
         if (!isMoving) return;
+        
 
         transform.localScale = (moveDelta.x > 0) ? Vector3.one : new Vector3(-1, 1, 1);
 
@@ -78,6 +84,7 @@ public class PlayerBehaviour : MonoBehaviour
         if (hit.collider != null) return;
 
         transform.Translate(moveDelta * Time.deltaTime);
+        Step.Play();
 
     }
 
@@ -90,6 +97,7 @@ public class PlayerBehaviour : MonoBehaviour
         OnDead(other);
 
         Survive(other);
+        SoundDead.Play();
     }
 
     private void SlideOnIce(Collider2D other)
