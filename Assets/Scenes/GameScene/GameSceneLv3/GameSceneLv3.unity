@@ -335,7 +335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd7c26d59b5f9404db3c60cb29e5c45d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookAt: {fileID: 0}
+  lookAt: {fileID: 2105091089}
   boundX: 0.15
   boundY: 0.05
 --- !u!1001 &198395532
@@ -45169,6 +45169,11 @@ Transform:
 --- !u!61 &2105091086 stripped
 BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 1152452228704035939, guid: 84879cf45bd06d84ebce40583800ef39, type: 3}
+  m_PrefabInstance: {fileID: 580970969}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2105091089 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4872056157576901773, guid: 84879cf45bd06d84ebce40583800ef39, type: 3}
   m_PrefabInstance: {fileID: 580970969}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &2144332522 stripped
