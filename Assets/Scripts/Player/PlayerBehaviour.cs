@@ -43,7 +43,7 @@ public class PlayerBehaviour : MonoBehaviour
         boxCollider2D = GetComponent<BoxCollider2D>();
         playerAnim = GetComponentInChildren<Animator>();
         playerRb = GetComponent<Rigidbody2D>();
-        Step = GetComponent<AudioSource>();
+        // Step = GetComponent<AudioSource>();
         
     }
     // Update is called once per frame
@@ -85,7 +85,6 @@ public class PlayerBehaviour : MonoBehaviour
 
         transform.Translate(moveDelta * Time.deltaTime);
         Step.Play();
-
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -97,7 +96,6 @@ public class PlayerBehaviour : MonoBehaviour
         OnDead(other);
 
         Survive(other);
-        SoundDead.Play();
     }
 
     private void SlideOnIce(Collider2D other)
@@ -114,6 +112,8 @@ public class PlayerBehaviour : MonoBehaviour
         isDead = true;
 
         playerAnim.SetTrigger("isDead");
+
+        SoundDead.Play();
 
         GameOver.Invoke();
     }

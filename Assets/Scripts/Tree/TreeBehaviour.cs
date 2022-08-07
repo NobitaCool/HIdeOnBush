@@ -24,37 +24,31 @@ public class TreeBehaviour : MonoBehaviour
         private const string PLAYER_TAG = "Player";
 
         //Sound Growup
-        [SerializeField] private AudioSource soundgrowup;
+        [SerializeField] private AudioSource soundGrowup;
     #endregion
     #endregion
     private void Start()
     {
-        soundgrowup = GetComponent<AudioSource>();
+        soundGrowup = GetComponent<AudioSource>();
     }
+
     #region Function
     void OnTriggerEnter2D(Collider2D other)
-        {
-            isReborn = true;
+    {
         // Condition: !player do nothing
         if (!other.gameObject.CompareTag(PLAYER_TAG)) return;
         
-        
+        if(!isReborn) soundGrowup.Play();
 
+        isReborn = true;
         // Spawn cây 
         // Instantiate(effect, transform.position, Quaternion.identity);
         tree.SetActive(isReborn);
 
-        // Sound growup
-        if (isReborn !=false)
-        {
-            soundgrowup.Play();
-            
-        }
-        
-
         // Xóa gốc 
         stump.SetActive(!isReborn);
-        }
+         
+    }
     #endregion
 
 }
