@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     #region Variable
         #region UI
             [SerializeField] private GameObject gameOverUI;
+            [SerializeField] private Button playBtn;
+            [SerializeField] private GameObject levelPanel;
         #endregion
         #region const
             private const int TOTAL_LEVEL = 10;
@@ -22,12 +24,13 @@ public class GameManager : MonoBehaviour
             private bool enableSound = true;
         #endregion
     #endregion
-    
-   
 
     public void LoadGameScene(int level) => SceneManager.LoadScene(level, LoadSceneMode.Single);
 
-    public void LoadLevelScene() => SceneManager.LoadScene("LevelScene", LoadSceneMode.Single);
+    public void LoadLevelPanel() 
+    {
+        
+    } 
 
     public void LoadMainMenuScene() => SceneManager.LoadScene("MainMenuScene", LoadSceneMode.Single);
 
