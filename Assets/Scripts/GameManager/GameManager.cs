@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class GameManager : MonoBehaviour
         #region UI
             [SerializeField] private GameObject gameOverUI;
             [SerializeField] private GameObject levelPanel;
+            [SerializeField] private TextMeshProUGUI levelValue;
         #endregion
         #region const
             private const int TOTAL_LEVEL = 10;
@@ -71,6 +73,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameOverUI.SetActive(true);
+        levelValue.text = "0" + SceneManager.GetActiveScene().buildIndex;
     }
 
     public void Victory()
