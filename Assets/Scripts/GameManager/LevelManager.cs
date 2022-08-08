@@ -8,6 +8,15 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Button[] level_Btns;
     [SerializeField] private Image[] lock_Btns;
     private int curLevel;
+
+    private static LevelManager instance;
+
+    public static LevelManager GetInstance()
+    {
+        if(!instance) instance = new LevelManager();
+
+        return instance;
+    }
     void Start() 
     {
         curLevel = PlayerPrefs.GetInt("curLevel", 1);
@@ -25,9 +34,6 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    public void ResetLevel()
-    {
-        PlayerPrefs.DeleteKey("curLevel");
-    }
+    private void ResetLevel() => PlayerPrefs.DeleteKey("curLevel");
 
 }

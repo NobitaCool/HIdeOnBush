@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TreeBehaviour : MonoBehaviour
 {
@@ -18,13 +19,13 @@ public class TreeBehaviour : MonoBehaviour
         // Tái sinh chưa?
         [SerializeField] private bool isReborn = false;
 
-    
-
         // Player tag name
         private const string PLAYER_TAG = "Player";
 
         //Sound Growup
         [SerializeField] private AudioSource soundGrowup;
+
+        public UnityEvent GateHealthChange;
     #endregion
     #endregion
     private void Start()
@@ -38,7 +39,9 @@ public class TreeBehaviour : MonoBehaviour
         // Condition: !player do nothing
         if (!other.gameObject.CompareTag(PLAYER_TAG)) return;
         
-        if(!isReborn) soundGrowup.Play();
+        if(isReborn) return;
+        
+        soundGrowup.Play();
 
         isReborn = true;
         // Spawn cây 
@@ -48,6 +51,7 @@ public class TreeBehaviour : MonoBehaviour
         // Xóa gốc 
         stump.SetActive(!isReborn);
          
+        GateHealthChange.Invoke();
     }
     #endregion
 

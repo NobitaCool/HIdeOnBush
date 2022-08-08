@@ -47,7 +47,6 @@ public class PlayerBehaviour : MonoBehaviour
     private void FixedUpdate()
     {
         if(isDead) return;
-        
         MoveMent();
     }
 

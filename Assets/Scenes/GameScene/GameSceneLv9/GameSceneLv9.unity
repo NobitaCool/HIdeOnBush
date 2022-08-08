@@ -659,7 +659,7 @@ Transform:
   - {fileID: 1870483559}
   - {fileID: 926222171}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &762871822
 GameObject:
@@ -727,7 +727,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &769799510
 PrefabInstance:
@@ -784,11 +784,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1078702437678211511, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1689264954}
+    - target: {fileID: 1078702437678211511, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HealthChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078702437678211511, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GateBehaviour, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078702437678211511, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
 --- !u!4 &769799511 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1078702437678211510, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
+  m_PrefabInstance: {fileID: 769799510}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &769799512 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1078702437678211509, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
   m_PrefabInstance: {fileID: 769799510}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &809041695 stripped
@@ -1081,7 +1102,7 @@ Transform:
   - {fileID: 337027829}
   - {fileID: 503163299}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1120241882
 GameObject:
@@ -2246,7 +2267,7 @@ Transform:
   - {fileID: 769799511}
   - {fileID: 1912508469}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1571496602
 PrefabInstance:
@@ -2303,11 +2324,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1078702437678211511, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1689264954}
+    - target: {fileID: 1078702437678211511, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HealthChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078702437678211511, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GateBehaviour, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078702437678211511, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
 --- !u!4 &1571496603 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1078702437678211510, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
+  m_PrefabInstance: {fileID: 1571496602}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1571496604 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1078702437678211509, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
   m_PrefabInstance: {fileID: 1571496602}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1642066802
@@ -2365,11 +2407,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1078702437678211511, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1689264954}
+    - target: {fileID: 1078702437678211511, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HealthChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078702437678211511, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GateBehaviour, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078702437678211511, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
 --- !u!4 &1642066803 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1078702437678211510, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
+  m_PrefabInstance: {fileID: 1642066802}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1642066804 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1078702437678211509, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
   m_PrefabInstance: {fileID: 1642066802}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1688576226
@@ -2427,6 +2490,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1078702437678211511, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1689264954}
+    - target: {fileID: 1078702437678211511, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HealthChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078702437678211511, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GateBehaviour, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078702437678211511, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
 --- !u!4 &1688576227 stripped
@@ -2434,6 +2513,107 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1078702437678211510, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
   m_PrefabInstance: {fileID: 1688576226}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1688576228 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1078702437678211509, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
+  m_PrefabInstance: {fileID: 1688576226}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1689264953
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6865543476266975089, guid: 78c4c3b7dd3580348a6b39bc1c7e7818, type: 3}
+      propertyPath: trees.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6865543476266975089, guid: 78c4c3b7dd3580348a6b39bc1c7e7818, type: 3}
+      propertyPath: trees.Array.data[0]
+      value: 
+      objectReference: {fileID: 1571496604}
+    - target: {fileID: 6865543476266975089, guid: 78c4c3b7dd3580348a6b39bc1c7e7818, type: 3}
+      propertyPath: trees.Array.data[1]
+      value: 
+      objectReference: {fileID: 1642066804}
+    - target: {fileID: 6865543476266975089, guid: 78c4c3b7dd3580348a6b39bc1c7e7818, type: 3}
+      propertyPath: trees.Array.data[2]
+      value: 
+      objectReference: {fileID: 1688576228}
+    - target: {fileID: 6865543476266975089, guid: 78c4c3b7dd3580348a6b39bc1c7e7818, type: 3}
+      propertyPath: trees.Array.data[3]
+      value: 
+      objectReference: {fileID: 2068862744}
+    - target: {fileID: 6865543476266975089, guid: 78c4c3b7dd3580348a6b39bc1c7e7818, type: 3}
+      propertyPath: trees.Array.data[4]
+      value: 
+      objectReference: {fileID: 769799512}
+    - target: {fileID: 6865543476266975089, guid: 78c4c3b7dd3580348a6b39bc1c7e7818, type: 3}
+      propertyPath: trees.Array.data[5]
+      value: 
+      objectReference: {fileID: 1912508470}
+    - target: {fileID: 9115952291747355796, guid: 78c4c3b7dd3580348a6b39bc1c7e7818, type: 3}
+      propertyPath: m_Name
+      value: Gate
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115952291747355798, guid: 78c4c3b7dd3580348a6b39bc1c7e7818, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115952291747355798, guid: 78c4c3b7dd3580348a6b39bc1c7e7818, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.185828
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115952291747355798, guid: 78c4c3b7dd3580348a6b39bc1c7e7818, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115952291747355798, guid: 78c4c3b7dd3580348a6b39bc1c7e7818, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115952291747355798, guid: 78c4c3b7dd3580348a6b39bc1c7e7818, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115952291747355798, guid: 78c4c3b7dd3580348a6b39bc1c7e7818, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115952291747355798, guid: 78c4c3b7dd3580348a6b39bc1c7e7818, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115952291747355798, guid: 78c4c3b7dd3580348a6b39bc1c7e7818, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115952291747355798, guid: 78c4c3b7dd3580348a6b39bc1c7e7818, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115952291747355798, guid: 78c4c3b7dd3580348a6b39bc1c7e7818, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115952291747355798, guid: 78c4c3b7dd3580348a6b39bc1c7e7818, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 78c4c3b7dd3580348a6b39bc1c7e7818, type: 3}
+--- !u!114 &1689264954 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6865543476266975089, guid: 78c4c3b7dd3580348a6b39bc1c7e7818, type: 3}
+  m_PrefabInstance: {fileID: 1689264953}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3d0ec429ab94f4c97aff656baefd4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1767350776
 GameObject:
   m_ObjectHideFlags: 0
@@ -24098,11 +24278,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1078702437678211511, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1689264954}
+    - target: {fileID: 1078702437678211511, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HealthChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078702437678211511, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GateBehaviour, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078702437678211511, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
 --- !u!4 &1912508469 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1078702437678211510, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
+  m_PrefabInstance: {fileID: 1912508468}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1912508470 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1078702437678211509, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
   m_PrefabInstance: {fileID: 1912508468}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1934482993
@@ -24187,7 +24388,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1986068743
 GameObject:
@@ -24221,7 +24422,7 @@ Transform:
   - {fileID: 1357954548}
   - {fileID: 1388794842}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1988330096
 GameObject:
@@ -24270,7 +24471,7 @@ Transform:
   - {fileID: 1120241883}
   - {fileID: 1291674335}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2017459577
 GameObject:
@@ -24684,10 +24885,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1078702437678211511, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1689264954}
+    - target: {fileID: 1078702437678211511, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HealthChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078702437678211511, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GateBehaviour, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1078702437678211511, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
 --- !u!4 &2068862743 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1078702437678211510, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
+  m_PrefabInstance: {fileID: 2068862742}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2068862744 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1078702437678211509, guid: 6f2279e486bd87847b51257fa8f65104, type: 3}
   m_PrefabInstance: {fileID: 2068862742}
   m_PrefabAsset: {fileID: 0}

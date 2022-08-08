@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     public void LoadLevelPanel() 
     {
         
-    } 
+    }
 
     public void LoadMainMenuScene() => SceneManager.LoadScene("MainMenuScene", LoadSceneMode.Single);
 
@@ -37,6 +37,8 @@ public class GameManager : MonoBehaviour
 
     public void LoadNextLevel()
     {
+        if(SceneManager.GetActiveScene().buildIndex < PlayerPrefs.GetInt("curLevel")) return;
+
         int nextLevel = PlayerPrefs.GetInt("curLevel") + 1;
 
         if(nextLevel > TOTAL_LEVEL)
@@ -73,6 +75,7 @@ public class GameManager : MonoBehaviour
 
     public void Victory()
     {
-        LoadGameScene(SceneManager.GetActiveScene().buildIndex + 1); 
+        LoadGameScene(SceneManager.GetActiveScene().buildIndex + 1);
+        LoadNextLevel(); 
     }
 }
