@@ -159,6 +159,8 @@ MonoBehaviour:
   treeSprite: {fileID: 4872056157628867466}
   playerAnim: {fileID: 4872056157443783225}
   playerRb: {fileID: 4872056157576901808}
+  Step: {fileID: 0}
+  SoundDead: {fileID: 0}
   joystick: {fileID: 0}
   GameOver:
     m_PersistentCalls:

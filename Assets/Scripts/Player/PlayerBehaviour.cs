@@ -14,8 +14,7 @@ public class PlayerBehaviour : MonoBehaviour
             [SerializeField] private GameObject treeSprite;
             [SerializeField] private Animator playerAnim;
             [SerializeField] private Rigidbody2D playerRb;
-            [SerializeField] private AudioSource Step;
-            [SerializeField] private AudioSource SoundDead;
+            [SerializeField] private AudioSource playerStep;
     private bool isMoving;
             private bool isRunning;
             private bool isDead;
@@ -42,15 +41,13 @@ public class PlayerBehaviour : MonoBehaviour
     {
         boxCollider2D = GetComponent<BoxCollider2D>();
         playerAnim = GetComponentInChildren<Animator>();
-        playerRb = GetComponent<Rigidbody2D>();
-        // Step = GetComponent<AudioSource>();
-        
+        playerRb = GetComponent<Rigidbody2D>();     
     }
     // Update is called once per frame
     private void FixedUpdate()
     {
-        if (isDead) return;
-
+        if(isDead) return;
+        
         MoveMent();
     }
 
@@ -70,9 +67,12 @@ public class PlayerBehaviour : MonoBehaviour
 
         gameObject.GetComponent<Collider2D>().enabled = isMoving;
 
-        if (!isMoving) return;
+        if (!isMoving) 
+        {
+            playerStep.Stop();
+            return;
+        } 
         
-
         transform.localScale = (moveDelta.x > 0) ? Vector3.one : new Vector3(-1, 1, 1);
 
         isRunning = (Mathf.Sqrt(moveDelta.x * moveDelta.x + moveDelta.y * moveDelta.y) >= RUN_SPEED) ? true : false;
@@ -84,7 +84,8 @@ public class PlayerBehaviour : MonoBehaviour
         if (hit.collider != null) return;
 
         transform.Translate(moveDelta * Time.deltaTime);
-        Step.Play();
+        
+        if(!playerStep.isPlaying) playerStep.Play();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -95,7 +96,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         OnDead(other);
 
-        Survive(other);
+        Survive(other);       
     }
 
     private void SlideOnIce(Collider2D other)
@@ -112,8 +113,6 @@ public class PlayerBehaviour : MonoBehaviour
         isDead = true;
 
         playerAnim.SetTrigger("isDead");
-
-        SoundDead.Play();
 
         GameOver.Invoke();
     }

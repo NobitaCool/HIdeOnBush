@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour
     #region Variable
         #region UI
             [SerializeField] private GameObject gameOverUI;
-            [SerializeField] private Button playBtn;
             [SerializeField] private GameObject levelPanel;
         #endregion
         #region const
