@@ -44,4 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d8496d7e0acf9840977538c2bd59569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverUI: {fileID: 1347635806945503504, guid: 19845755f22213b4ebe0451e0b4d0124, type: 3}
+  gameOverUI: {fileID: 958258430804259422, guid: 19d0e3a7fc043e4429c5bcabc5bef849, type: 3}
+  levelPanel: {fileID: 0}
+  backgroundSound: {fileID: 0}
