@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Enemy
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 50
+      m_TextureCompression: 1
+      m_CompressionQuality: 100
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: -270650236, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+    - {fileID: 1628795306, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+    - {fileID: 1198959040, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+    - {fileID: -408167762, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+    - {fileID: -215451244, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+    - {fileID: -1780746255, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+    - {fileID: 1778558469, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+    - {fileID: -212860843, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+    - {fileID: 1555469496, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+    - {fileID: -66664906, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+    - {fileID: 589628822, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+    - {fileID: 280941756, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+    - {fileID: -2051404067, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+    - {fileID: -160985946, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+    - {fileID: -1814534104, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+    - {fileID: 1190856596, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -1814534104, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+  - {fileID: 1190856596, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+  - {fileID: 589628822, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+  - {fileID: 280941756, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+  - {fileID: -2051404067, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+  - {fileID: -160985946, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+  - {fileID: -66664906, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+  - {fileID: 1555469496, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+  - {fileID: -1780746255, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+  - {fileID: -215451244, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+  - {fileID: -212860843, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+  - {fileID: 1778558469, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+  - {fileID: 1628795306, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+  - {fileID: -270650236, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+  - {fileID: -408167762, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+  - {fileID: 1198959040, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Walk_14
+  - Walk_15
+  - Walk_10
+  - Walk_11
+  - Walk_12
+  - Walk_13
+  - Walk_9
+  - Walk_8
+  - Walk_5
+  - Walk_4
+  - Walk_7
+  - Walk_6
+  - Walk_1
+  - Walk_0
+  - Walk_3
+  - Walk_2
+  m_RenderDataMap: {}
+  m_Tag: Enemy
+  m_IsVariant: 0
