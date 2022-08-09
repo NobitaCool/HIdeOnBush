@@ -23,9 +23,9 @@ SpriteAtlas:
     platformSettings:
     - serializedVersion: 3
       m_BuildTarget: Android
-      m_MaxTextureSize: 2048
+      m_MaxTextureSize: 1024
       m_ResizeAlgorithm: 0
-      m_TextureFormat: 50
+      m_TextureFormat: 45
       m_TextureCompression: 1
       m_CompressionQuality: 100
       m_CrunchedCompression: 0
@@ -60,11 +60,13 @@ SpriteAtlas:
     - {fileID: -160985946, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
     - {fileID: -1814534104, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
     - {fileID: 1190856596, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
+    - {fileID: 21300000, guid: 47b60523bdfa9aa42acb5d1072e5cc63, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: 47b60523bdfa9aa42acb5d1072e5cc63, type: 3}
   - {fileID: -1814534104, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
   - {fileID: 1190856596, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
   - {fileID: 589628822, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
@@ -82,6 +84,7 @@ SpriteAtlas:
   - {fileID: -408167762, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
   - {fileID: 1198959040, guid: 17ec0db47243a474d9e7836335f09c7b, type: 3}
   m_PackedSpriteNamesToIndex:
+  - visible
   - Walk_14
   - Walk_15
   - Walk_10
@@ -99,5 +102,5 @@ SpriteAtlas:
   - Walk_3
   - Walk_2
   m_RenderDataMap: {}
-  m_Tag: Enemy
+  m_Tag: EnemyAtlas
   m_IsVariant: 0
