@@ -23,6 +23,7 @@ public class GateBehaviour : MonoBehaviour
 
     private void Start()
     {
+        trees = GameObject.FindGameObjectsWithTag("Tree");
         Health = trees.Length;
     }
 

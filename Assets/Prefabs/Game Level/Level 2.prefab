@@ -62962,6 +62962,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5797600540410953849}
     m_Modifications:
+    - target: {fileID: 100436948692228840, guid: b203b4c1fa874b643a29e8e8975386f4, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8192091549967478002}
+    - target: {fileID: 100436948692228840, guid: b203b4c1fa874b643a29e8e8975386f4, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HealthChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 100436948692228840, guid: b203b4c1fa874b643a29e8e8975386f4, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GateBehaviour, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 100436948692228840, guid: b203b4c1fa874b643a29e8e8975386f4, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 100436948692228841, guid: b203b4c1fa874b643a29e8e8975386f4, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -63054,7 +63070,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6272868454003965150, guid: a20141f7c9f518045847063d8d0a2580, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.003764987
+      value: -0.518
       objectReference: {fileID: 0}
     - target: {fileID: 6272868454003965150, guid: a20141f7c9f518045847063d8d0a2580, type: 3}
       propertyPath: m_LocalPosition.y
@@ -63336,6 +63352,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9115952291747355798, guid: 78c4c3b7dd3580348a6b39bc1c7e7818, type: 3}
   m_PrefabInstance: {fileID: 3384288779906765699}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8192091549967478002 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6865543476266975089, guid: 78c4c3b7dd3580348a6b39bc1c7e7818, type: 3}
+  m_PrefabInstance: {fileID: 3384288779906765699}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa3d0ec429ab94f4c97aff656baefd4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5797600540051874984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63373,7 +63400,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6272868454003965150, guid: a20141f7c9f518045847063d8d0a2580, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.003764987
+      value: 0.72
       objectReference: {fileID: 0}
     - target: {fileID: 6272868454003965150, guid: a20141f7c9f518045847063d8d0a2580, type: 3}
       propertyPath: m_LocalPosition.y
@@ -63449,6 +63476,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5797600540410953849}
     m_Modifications:
+    - target: {fileID: 100436948692228840, guid: b203b4c1fa874b643a29e8e8975386f4, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8192091549967478002}
+    - target: {fileID: 100436948692228840, guid: b203b4c1fa874b643a29e8e8975386f4, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HealthChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 100436948692228840, guid: b203b4c1fa874b643a29e8e8975386f4, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GateBehaviour, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 100436948692228840, guid: b203b4c1fa874b643a29e8e8975386f4, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 100436948692228841, guid: b203b4c1fa874b643a29e8e8975386f4, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -63511,6 +63554,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5797600540410953849}
     m_Modifications:
+    - target: {fileID: 100436948692228840, guid: b203b4c1fa874b643a29e8e8975386f4, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8192091549967478002}
+    - target: {fileID: 100436948692228840, guid: b203b4c1fa874b643a29e8e8975386f4, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HealthChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 100436948692228840, guid: b203b4c1fa874b643a29e8e8975386f4, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GateBehaviour, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 100436948692228840, guid: b203b4c1fa874b643a29e8e8975386f4, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 100436948692228841, guid: b203b4c1fa874b643a29e8e8975386f4, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -63573,6 +63632,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5797600540410953849}
     m_Modifications:
+    - target: {fileID: 100436948692228840, guid: b203b4c1fa874b643a29e8e8975386f4, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8192091549967478002}
+    - target: {fileID: 100436948692228840, guid: b203b4c1fa874b643a29e8e8975386f4, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HealthChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 100436948692228840, guid: b203b4c1fa874b643a29e8e8975386f4, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GateBehaviour, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 100436948692228840, guid: b203b4c1fa874b643a29e8e8975386f4, type: 3}
+      propertyPath: GateHealthChange.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 100436948692228841, guid: b203b4c1fa874b643a29e8e8975386f4, type: 3}
       propertyPath: m_RootOrder
       value: 0
