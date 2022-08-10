@@ -56,18 +56,18 @@ public class GameManager : MonoBehaviour
             levelScenes[i].SetActive(false);
         }
 
+        curLevel = PlayerPrefs.GetInt("levelAt");
+
         levelScenes[curLevel-1].SetActive(true);
 
         ResetCamTarget.Invoke();
-
-        Debug.Log("Level: " + curLevel);
     }
 
     public void LoadGameScene(int level) 
     {
         SceneManager.LoadScene("GameScene", LoadSceneMode.Single);
 
-        curLevel = level;
+        PlayerPrefs.SetInt("levelAt", level);
     } 
 
     public void LoadLevelPanel() 
@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadMainMenuScene() => SceneManager.LoadScene("MainMenuScene", LoadSceneMode.Single);
 
-    public void LoadCurrentLevel() => LoadGameScene(curLevel);
+    public void LoadCurrentLevel() => LoadGameScene(PlayerPrefs.GetInt("levelAt"));
 
     public void LoadNextLevel()
     {
@@ -120,6 +120,7 @@ public class GameManager : MonoBehaviour
     public void Victory()
     {
         curLevel++;
+        PlayerPrefs.SetInt("levelAt", curLevel);
         LoadLevelScene();
         LoadNextLevel(); 
     }
