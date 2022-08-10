@@ -44,6 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d8496d7e0acf9840977538c2bd59569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverUI: {fileID: 958258430804259422, guid: 19d0e3a7fc043e4429c5bcabc5bef849, type: 3}
+  gameOverUI: {fileID: 0}
+  generateUI:
+  - {fileID: 0}
+  - {fileID: 0}
   levelPanel: {fileID: 0}
+  levelValue: {fileID: 0}
+  curLevel: 2
+  levelScenes: []
   backgroundSound: {fileID: 0}

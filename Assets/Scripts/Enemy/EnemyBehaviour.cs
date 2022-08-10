@@ -12,8 +12,6 @@ public class EnemyBehaviour : MonoBehaviour
             [SerializeField] private Collider2D visible;
             [SerializeField] private Collider2D player;
             [SerializeField] private bool isChasing = false;
-            [SerializeField] private NavMeshAgent navMesh;
-
             private float lastTime;
             private bool isMovingRight;
             private bool isMovingUP;
@@ -31,11 +29,13 @@ public class EnemyBehaviour : MonoBehaviour
     #endregion
     private void OnValidate() 
     {
-        navMesh = GetComponent<NavMeshAgent>();
-        navMesh.updateRotation = false;
-        navMesh.updateUpAxis = false;
-        enemyAnim = GetComponentInChildren<Animator>();
+        enemyAnim = GetComponentInChildren<Animator>(); 
     }         
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Collider2D>();
+    }
 
     private void Update()
     {
@@ -59,12 +59,12 @@ public class EnemyBehaviour : MonoBehaviour
     public void Chasing() 
     {
         isChasing = true;
-        navMesh.SetDestination(player.gameObject.transform.position);
+
+        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
     }
 
     private void Patrolling()
-    {
-        // di chuyển thông thường
+    { 
         transform.position = Vector2.MoveTowards(transform.position, points[curIndex].position, speed * Time.deltaTime);  
 
         if (transform.position != points[curIndex].position) return;
@@ -72,13 +72,14 @@ public class EnemyBehaviour : MonoBehaviour
         if(Time.time - lastTime < waitTime) return; 
         
         UpdateDestination();    
+
         lastTime = Time.time;
     }
 
     private void PlayAnimation()
     {
         // Tìm hướng
-        Vector3 direction = points[curIndex].position - transform.position;
+        Vector3 direction = (isChasing)? player.transform.position - transform.position : points[curIndex].position - transform.position;
 
         isHorizontal = (Vector3.Angle(direction, Vector3.right) % 180 == 0)? true : false;
 
@@ -92,9 +93,7 @@ public class EnemyBehaviour : MonoBehaviour
            
         enemyAnim.SetBool("isMovingUp", isMovingUP);    
 
-        var angle = Vector3.Angle(direction, Vector3.up); 
-
-        if(isMovingRight) angle *= -1;
+        var angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90; 
 
         visible.gameObject.transform.eulerAngles = Vector3.forward * angle;   
 

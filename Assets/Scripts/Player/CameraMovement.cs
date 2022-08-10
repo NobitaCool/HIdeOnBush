@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    public Transform lookAt;
+    [SerializeField] private Transform lookAt;
 
-    public float boundX = 0.15f;
-    public float boundY = 0.05f;
+    [SerializeField] private float boundX = 0.15f;
+    [SerializeField] private float boundY = 0.05f;
+
+    private void Awake()
+    {
+        lookAt = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+    }
 
     private void LateUpdate()
     {
@@ -39,5 +44,10 @@ public class CameraMovement : MonoBehaviour
             }
         }
         transform.position += new Vector3(delta.x, delta.y, 0);
+    }
+
+    public void ResetTarget()
+    {
+        lookAt = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 }

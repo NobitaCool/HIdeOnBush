@@ -159,7 +159,8 @@ MonoBehaviour:
   treeSprite: {fileID: 4872056157628867466}
   playerAnim: {fileID: 4872056157443783225}
   playerRb: {fileID: 4872056157576901808}
-  joystick: {fileID: 0}
+  playerStep: {fileID: 0}
+  joystick: {fileID: 1651428484284480653, guid: 1731838e3d9b8e842be05e1d624e872e, type: 3}
   GameOver:
     m_PersistentCalls:
       m_Calls:
@@ -224,7 +225,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.03}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -235,7 +236,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.1}
+  m_Size: {x: 0.1, y: 0.05}
   m_EdgeRadius: 0
 --- !u!1 &4872056157628867466
 GameObject:
