@@ -35,11 +35,14 @@ public class GameManager : MonoBehaviour
             private bool isPause = false;
             private bool enableSound = true;
         #endregion
+        #region Event
+            public UnityEvent ResetCamTarget;
+        #endregion
     #endregion
 
     private void Awake()
     {
-        levelScenes = GameObject.FindGameObjectsWithTag("Level");
+        levelScenes = GameObject.FindGameObjectsWithTag("Level"); 
 
         if(levelScenes.Length <= 0) return;
 
@@ -54,6 +57,10 @@ public class GameManager : MonoBehaviour
         }
 
         levelScenes[curLevel-1].SetActive(true);
+
+        ResetCamTarget.Invoke();
+
+        Debug.Log("Level: " + curLevel);
     }
 
     public void LoadGameScene(int level) 
@@ -108,12 +115,12 @@ public class GameManager : MonoBehaviour
     {
         gameOverUI.SetActive(true);
         levelValue.text = "0" + curLevel;
-        Debug.Log(curLevel);
     }
 
     public void Victory()
     {
-        LoadGameScene(curLevel + 1);
+        curLevel++;
+        LoadLevelScene();
         LoadNextLevel(); 
     }
 }

@@ -9,7 +9,7 @@ public class CameraMovement : MonoBehaviour
     [SerializeField] private float boundX = 0.15f;
     [SerializeField] private float boundY = 0.05f;
 
-    private void Awake()
+    private void Start()
     {
         lookAt = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }

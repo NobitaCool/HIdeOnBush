@@ -25,7 +25,7 @@ public class PlayerBehaviour : MonoBehaviour
         #endregion
         #region const
             private const float RUN_SPEED = 0.95f;
-            private const float ICE_FORCE = 30.0f;
+            private const float ICE_FORCE = 25.0f;
             private const string ENEMY_TAG = "Enemy";
             private const string ICE_TAG = "Ice";
             private const string GATE_TAG = "Gate";
@@ -68,7 +68,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (!isMoving) 
         {
-            playerStep.Stop();
+            // playerStep.Stop();
             return;
         } 
         
@@ -84,7 +84,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         transform.Translate(moveDelta * Time.deltaTime);
         
-        if(!playerStep.isPlaying) playerStep.Play();
+        // if(!playerStep.isPlaying) playerStep.Play();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
