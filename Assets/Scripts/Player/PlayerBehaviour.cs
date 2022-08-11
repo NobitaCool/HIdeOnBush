@@ -15,6 +15,8 @@ public class PlayerBehaviour : MonoBehaviour
             [SerializeField] private Animator playerAnim;
             [SerializeField] private Rigidbody2D playerRb;
             [SerializeField] private AudioSource playerStep;
+            [SerializeField] private GameObject footPrint;
+            private float lastTime;
     private bool isMoving;
             private bool isRunning;
             private bool isDead;
@@ -35,7 +37,6 @@ public class PlayerBehaviour : MonoBehaviour
             public UnityEvent Victory;
         #endregion
     #endregion
-
 
     private void OnValidate()
     {
@@ -83,8 +84,25 @@ public class PlayerBehaviour : MonoBehaviour
         if (hit.collider != null) return;
 
         transform.Translate(moveDelta * Time.deltaTime);
+
+        float delay = 1 - Mathf.Sqrt(moveDelta.x * moveDelta.x + moveDelta.y * moveDelta.y);
+
+        PrintFoot(delay);
         
         // if(!playerStep.isPlaying) playerStep.Play();
+    }
+
+    private void PrintFoot(float delay)
+    {
+        delay = Mathf.Clamp(delay, 0.1f, 1f);
+
+        if(Time.time - lastTime < delay) return;
+
+        GameObject foot = Instantiate(footPrint, transform.position, Quaternion.identity);
+
+        Destroy(foot, 0.5f);
+
+        lastTime = Time.time;
     }
 
     private void OnTriggerEnter2D(Collider2D other)

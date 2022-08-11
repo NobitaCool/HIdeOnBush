@@ -160,6 +160,7 @@ MonoBehaviour:
   playerAnim: {fileID: 4872056157443783225}
   playerRb: {fileID: 4872056157576901808}
   playerStep: {fileID: 0}
+  footPrint: {fileID: 7693628177180216702, guid: 0036884b7bd58b544862f8f31a34bd9d, type: 3}
   joystick: {fileID: 1651428484284480653, guid: 1731838e3d9b8e842be05e1d624e872e, type: 3}
   GameOver:
     m_PersistentCalls:
