@@ -69,7 +69,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (!isMoving) 
         {
-            // playerStep.Stop();
+            playerStep.Stop();
             return;
         } 
         
@@ -89,7 +89,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         PrintFoot(delay);
         
-        // if(!playerStep.isPlaying) playerStep.Play();
+        if(!playerStep.isPlaying) playerStep.Play();
     }
 
     private void PrintFoot(float delay)

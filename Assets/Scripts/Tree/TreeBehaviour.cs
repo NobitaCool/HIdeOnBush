@@ -41,7 +41,7 @@ public class TreeBehaviour : MonoBehaviour
         
         if(isReborn) return;
         
-        // soundGrowup.Play();
+        soundGrowup.Play();
 
         isReborn = true;
         // Spawn cây 
