@@ -28,11 +28,7 @@ public class TreeBehaviour : MonoBehaviour
         public UnityEvent GateHealthChange;
     #endregion
     #endregion
-    private void Start()
-    {
-        soundGrowup = GetComponent<AudioSource>();
-    }
-
+    
     #region Function
     void OnTriggerEnter2D(Collider2D other)
     {

@@ -38112,7 +38112,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0ad591428b0c18c4da51fe3bf98dbc63, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -63016,6 +63016,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6690491750649128458}
     m_Modifications:
+    - target: {fileID: 445606591213630639, guid: 84879cf45bd06d84ebce40583800ef39, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4872056157576901772, guid: 84879cf45bd06d84ebce40583800ef39, type: 3}
       propertyPath: joystick
       value: 
