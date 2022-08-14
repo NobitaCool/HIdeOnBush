@@ -12,6 +12,7 @@ public class EnemyBehaviour : MonoBehaviour
             [SerializeField] private Collider2D visible;
             [SerializeField] private Collider2D player;
             [SerializeField] private bool isChasing = false;
+            [SerializeField] private AudioSource chasingAudio;
             private float lastTime;
             private bool isMovingRight;
             private bool isMovingUP;
@@ -59,6 +60,10 @@ public class EnemyBehaviour : MonoBehaviour
     public void Chasing() 
     {
         isChasing = true;
+
+        if(!chasingAudio.isPlaying && visible.GetComponent<Collider2D>().isActiveAndEnabled) chasingAudio.Play();
+
+        visible.GetComponent<Collider2D>().enabled = false;
 
         transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
     }
