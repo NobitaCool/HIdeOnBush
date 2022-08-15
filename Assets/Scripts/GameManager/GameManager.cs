@@ -60,6 +60,8 @@ public class GameManager : MonoBehaviour
 
         levelScenes[curLevel-1].SetActive(true);
 
+        PlayerPrefs.Save();
+
         ResetCamTarget.Invoke();
     }
 
@@ -89,6 +91,8 @@ public class GameManager : MonoBehaviour
         }
 
         PlayerPrefs.SetInt("curLevel", nextLevel);
+
+        PlayerPrefs.Save();
     }
 
     public void Pause()
@@ -114,6 +118,7 @@ public class GameManager : MonoBehaviour
     {
         gameOverUI.SetActive(true);
         levelValue.text = "0" + curLevel;
+        PlayerPrefs.Save();
     }
 
     public void Victory()
