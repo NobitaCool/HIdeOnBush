@@ -62768,8 +62768,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 445606591213630639, guid: 84879cf45bd06d84ebce40583800ef39, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4872056157576901772, guid: 84879cf45bd06d84ebce40583800ef39, type: 3}
+      propertyPath: gate
+      value: 
+      objectReference: {fileID: 5797600540341604117}
     - target: {fileID: 4872056157576901772, guid: 84879cf45bd06d84ebce40583800ef39, type: 3}
       propertyPath: joystick
       value: 

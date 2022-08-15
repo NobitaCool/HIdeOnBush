@@ -12,6 +12,8 @@ public class PlayerBehaviour : MonoBehaviour
             [SerializeField] private RaycastHit2D hit;
             [SerializeField] private GameObject playerSprite;
             [SerializeField] private GameObject treeSprite;
+            [SerializeField] private GameObject arrow;
+            [SerializeField] private Transform gate;
             [SerializeField] private Animator playerAnim;
             [SerializeField] private Rigidbody2D playerRb;
             [SerializeField] private AudioSource playerStep;
@@ -49,6 +51,21 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if(isDead) return;
         MoveMent();
+        if(gate.GetComponent<SpriteRenderer>().enabled) Direct();
+    }
+
+    private void Direct()
+    {
+        arrow.GetComponent<SpriteRenderer>().enabled = true;
+
+        var direction = gate.transform.position - transform.position;
+
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+        Debug.Log(angle);
+
+        arrow.transform.eulerAngles = Vector3.forward * angle;
+        arrow.transform.localScale = (transform.localScale == Vector3.one) ? Vector3.one : new Vector3(-1, 1, 1);
     }
 
     private void MoveMent()
@@ -140,4 +157,6 @@ public class PlayerBehaviour : MonoBehaviour
 
         Victory.Invoke();
     }
+
 }
+

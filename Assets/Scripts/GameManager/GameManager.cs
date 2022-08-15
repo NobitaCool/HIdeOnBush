@@ -17,11 +17,11 @@ public class GameManager : MonoBehaviour
     #region Variable
         #region UI
             [SerializeField] private GameObject gameOverUI;
+            [SerializeField] private GameObject victoryUI;
             [SerializeField] private GameObject[] generateUI;
             [SerializeField] private GameObject[] player;
             [SerializeField] private GameObject levelPanel;
-            [SerializeField] private TextMeshProUGUI levelValue_GO;
-            [SerializeField] private TextMeshProUGUI levelValue_Con;
+            [SerializeField] private TextMeshProUGUI[] levelValue;
         #endregion
         #region Level
             [SerializeField] private int curLevel;
@@ -60,6 +60,8 @@ public class GameManager : MonoBehaviour
 
         levelScenes[curLevel-1].SetActive(true);
 
+        UpdateLevelValue();
+
         PlayerPrefs.Save();
 
         ResetCamTarget.Invoke();
@@ -86,7 +88,8 @@ public class GameManager : MonoBehaviour
 
         if(nextLevel > TOTAL_LEVEL)
         {
-            // DO SOMETHING 
+            victoryUI.SetActive(true);
+            PlayerPrefs.Save();
             return;
         }
 
@@ -102,8 +105,6 @@ public class GameManager : MonoBehaviour
         generateUI[(int) UIButton.PlayBtn].SetActive(isPause);
 
         EnableSound();
-
-        levelValue_Con.text = (curLevel < 10) ? "0" + curLevel : curLevel + "";
 
         Time.timeScale = isPause ? 0 : 1;
     }
@@ -127,17 +128,29 @@ public class GameManager : MonoBehaviour
 
         player[index].SetActive(true);
 
-        levelValue_GO.text = (curLevel < 10) ? "0" + curLevel : curLevel + "";
         PlayerPrefs.Save();
     }
 
     public void Victory()
     {
+        if(curLevel >= PlayerPrefs.GetInt("passedLevel") || !PlayerPrefs.HasKey("passedLevel")) PlayerPrefs.SetInt("passedLevel", curLevel);
+        
         curLevel++;
+
+        LoadNextLevel(); 
+        if(curLevel > TOTAL_LEVEL) return;
+        
         PlayerPrefs.SetInt("levelAt", curLevel);
         LoadLevelScene();
-        LoadNextLevel(); 
     }
 
     public void ResetTimeScale() => Time.timeScale = 1;
+
+    private void UpdateLevelValue()
+    {
+        if(levelValue.Length <= 0) return;
+
+        for(int i = 0; i < levelValue.Length; i++)
+            levelValue[i].text = (curLevel < 10) ? "0" + curLevel : curLevel + "";
+    }
 }

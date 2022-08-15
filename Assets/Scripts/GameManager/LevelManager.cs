@@ -7,7 +7,9 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField] private Button[] level_Btns;
     [SerializeField] private Image[] lock_Btns;
+    [SerializeField] private Image[] crown_Btns;
     private int curLevel;
+    private int passedLevel = 0;
 
     private void Awake() 
     {
@@ -20,6 +22,9 @@ public class LevelManager : MonoBehaviour
 
     public void UpdateLevel()
     {
+        if(PlayerPrefs.HasKey("passedLevel")) passedLevel = PlayerPrefs.GetInt("passedLevel");
+        Debug.Log( "Passed level: " + passedLevel);
+        
         for (int i = 0; i < level_Btns.Length; i++)
         {
             if (i + 1 <= curLevel) continue;
@@ -27,8 +32,20 @@ public class LevelManager : MonoBehaviour
             level_Btns[i].interactable = false;
             lock_Btns[i].enabled = true;
         }
+
+        for (int i = 0; i < level_Btns.Length; i++)
+        {
+            if(i < passedLevel) continue;
+
+            crown_Btns[i].enabled = false;
+        }
+        
     }
 
-    private void ResetLevel() => PlayerPrefs.DeleteKey("curLevel");
+    private void ResetLevel() 
+    {
+        PlayerPrefs.DeleteKey("curLevel");
+        PlayerPrefs.DeleteKey("passedLevel");
+    } 
 
 }
