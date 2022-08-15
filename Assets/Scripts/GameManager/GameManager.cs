@@ -42,9 +42,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        // levelScenes = GameObject.FindGameObjectsWithTag("Level"); 
-
-        // if(levelScenes.Length <= 0) return;
+        if(levelScenes.Length <= 0) return;
 
         LoadLevelScene();
     }
