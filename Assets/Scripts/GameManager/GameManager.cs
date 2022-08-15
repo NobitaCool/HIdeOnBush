@@ -67,6 +67,8 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("GameScene", LoadSceneMode.Single);
 
+        PlayerPrefs.DeleteKey("levelAt");
+
         PlayerPrefs.SetInt("levelAt", level);
     } 
 
