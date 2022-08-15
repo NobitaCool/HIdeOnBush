@@ -18,8 +18,10 @@ public class GameManager : MonoBehaviour
         #region UI
             [SerializeField] private GameObject gameOverUI;
             [SerializeField] private GameObject[] generateUI;
+            [SerializeField] private GameObject[] player;
             [SerializeField] private GameObject levelPanel;
-            [SerializeField] private TextMeshProUGUI levelValue;
+            [SerializeField] private TextMeshProUGUI levelValue_GO;
+            [SerializeField] private TextMeshProUGUI levelValue_Con;
         #endregion
         #region Level
             [SerializeField] private int curLevel;
@@ -101,6 +103,8 @@ public class GameManager : MonoBehaviour
 
         EnableSound();
 
+        levelValue_Con.text = (curLevel < 10) ? "0" + curLevel : curLevel + "";
+
         Time.timeScale = isPause ? 0 : 1;
     }
 
@@ -115,7 +119,15 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameOverUI.SetActive(true);
-        levelValue.text = (curLevel < 10) ? "0" + curLevel : curLevel + "";
+
+        for (int i = 0; i < player.Length; i++)
+            player[i].SetActive(false);
+
+        int index = (curLevel < 5) ? 0 : ((curLevel < 8) ? 1 : 2);
+
+        player[index].SetActive(true);
+
+        levelValue_GO.text = (curLevel < 10) ? "0" + curLevel : curLevel + "";
         PlayerPrefs.Save();
     }
 
