@@ -3144,6 +3144,22 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 2040215557}
+    - target: {fileID: 8641781259940370446, guid: b9d0699a0fd1c5548b0ef7bdc5292b10, type: 3}
+      propertyPath: Victory.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1834085551}
+    - target: {fileID: 8641781259940370446, guid: b9d0699a0fd1c5548b0ef7bdc5292b10, type: 3}
+      propertyPath: GameOver.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1834085551}
+    - target: {fileID: 8641781259940370446, guid: b9d0699a0fd1c5548b0ef7bdc5292b10, type: 3}
+      propertyPath: Victory.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Victory
+      objectReference: {fileID: 0}
+    - target: {fileID: 8641781259940370446, guid: b9d0699a0fd1c5548b0ef7bdc5292b10, type: 3}
+      propertyPath: GameOver.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GameOver
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9d0699a0fd1c5548b0ef7bdc5292b10, type: 3}
 --- !u!224 &2040215556 stripped
@@ -21576,6 +21592,22 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 2040215557}
+    - target: {fileID: 9029077183691882016, guid: 320b9921136da8243b2441aea2b10f48, type: 3}
+      propertyPath: Victory.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1834085551}
+    - target: {fileID: 9029077183691882016, guid: 320b9921136da8243b2441aea2b10f48, type: 3}
+      propertyPath: GameOver.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1834085551}
+    - target: {fileID: 9029077183691882016, guid: 320b9921136da8243b2441aea2b10f48, type: 3}
+      propertyPath: Victory.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Victory
+      objectReference: {fileID: 0}
+    - target: {fileID: 9029077183691882016, guid: 320b9921136da8243b2441aea2b10f48, type: 3}
+      propertyPath: GameOver.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GameOver
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 320b9921136da8243b2441aea2b10f48, type: 3}
 --- !u!1001 &1491638899029682347
@@ -21839,6 +21871,22 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 2040215557}
+    - target: {fileID: 443793350214765670, guid: 8cdf7896e07246748ba81c8fbe859d8f, type: 3}
+      propertyPath: Victory.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1834085551}
+    - target: {fileID: 443793350214765670, guid: 8cdf7896e07246748ba81c8fbe859d8f, type: 3}
+      propertyPath: GameOver.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1834085551}
+    - target: {fileID: 443793350214765670, guid: 8cdf7896e07246748ba81c8fbe859d8f, type: 3}
+      propertyPath: Victory.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Victory
+      objectReference: {fileID: 0}
+    - target: {fileID: 443793350214765670, guid: 8cdf7896e07246748ba81c8fbe859d8f, type: 3}
+      propertyPath: GameOver.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GameOver
+      objectReference: {fileID: 0}
     - target: {fileID: 1424003172298238872, guid: 8cdf7896e07246748ba81c8fbe859d8f, type: 3}
       propertyPath: m_RootOrder
       value: 5
