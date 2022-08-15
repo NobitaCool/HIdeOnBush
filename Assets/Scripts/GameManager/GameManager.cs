@@ -97,8 +97,10 @@ public class GameManager : MonoBehaviour
     public void Pause()
     {
         isPause = !isPause;
-
+        
         generateUI[(int) UIButton.PlayBtn].SetActive(isPause);
+
+        EnableSound();
 
         Time.timeScale = isPause ? 0 : 1;
     }

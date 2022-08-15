@@ -28,14 +28,15 @@ public class EnemyBehaviour : MonoBehaviour
             private Animator enemyAnim;
         #endregion
     #endregion
-    private void OnValidate() 
-    {
-        enemyAnim = GetComponentInChildren<Animator>(); 
-    }         
+    // private void OnValidate() 
+    // {
+    //     enemyAnim = GetComponentInChildren<Animator>(); 
+    // }         
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Collider2D>();
+        enemyAnim = GetComponentInChildren<Animator>();
     }
 
     private void Update()
