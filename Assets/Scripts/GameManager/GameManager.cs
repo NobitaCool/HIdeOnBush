@@ -70,11 +70,6 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("levelAt", level);
     } 
 
-    public void LoadLevelPanel() 
-    {
-        
-    }
-
     public void LoadMainMenuScene() => SceneManager.LoadScene("MainMenuScene", LoadSceneMode.Single);
 
     public void LoadCurrentLevel() => LoadGameScene(PlayerPrefs.GetInt("levelAt"));
