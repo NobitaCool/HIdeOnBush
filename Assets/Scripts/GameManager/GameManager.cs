@@ -115,7 +115,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameOverUI.SetActive(true);
-        levelValue.text = "0" + curLevel;
+        levelValue.text = (curLevel < 10) ? "0" + curLevel : curLevel + "";
         PlayerPrefs.Save();
     }
 
@@ -126,4 +126,6 @@ public class GameManager : MonoBehaviour
         LoadLevelScene();
         LoadNextLevel(); 
     }
+
+    public void ResetTimeScale() => Time.timeScale = 1;
 }
