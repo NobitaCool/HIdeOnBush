@@ -9,15 +9,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Image[] lock_Btns;
     private int curLevel;
 
-    private static LevelManager instance;
-
-    public static LevelManager GetInstance()
-    {
-        if(!instance) instance = new LevelManager();
-
-        return instance;
-    }
-    void Start() 
+    private void Awake() 
     {
         curLevel = PlayerPrefs.GetInt("curLevel", 1);
         UpdateLevel();
