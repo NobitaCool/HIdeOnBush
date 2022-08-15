@@ -11,8 +11,7 @@ public class LevelManager : MonoBehaviour
 
     private void Awake() 
     {
-        PlayerPrefs.DeleteKey("curLevel");
-        PlayerPrefs.SetInt("curLevel", 9);
+        if(!PlayerPrefs.HasKey("curLevel")) PlayerPrefs.SetInt("curLevel", 9);
         curLevel = PlayerPrefs.GetInt("curLevel");
         UpdateLevel();
     } 
