@@ -250,8 +250,8 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: "C:/Users/Admin/OneDrive/M\xE1y t\xEDnh/user.keystore"
-  AndroidKeyaliasName: doangiabao
+  AndroidKeystoreName: "C:/Users/phaml/OneDrive/M\xE1y t\xEDnh/user.keystore"
+  AndroidKeyaliasName: duythu2
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
@@ -274,7 +274,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 7d587e0e904acd346bd3e05e7299c5c3, type: 3}
+      m_Icon: {fileID: 2800000, guid: e5a9f2a1a37be3f459e41b227ca2d47b, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
