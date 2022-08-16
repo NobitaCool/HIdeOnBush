@@ -22367,6 +22367,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadMainMenuScene
       objectReference: {fileID: 0}
+    - target: {fileID: 1567371356425880178, guid: 6f726e30c7c6a954da0f7ff49389a853, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 82
+      objectReference: {fileID: 0}
+    - target: {fileID: 1567371356425880178, guid: 6f726e30c7c6a954da0f7ff49389a853, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 82
+      objectReference: {fileID: 0}
+    - target: {fileID: 1567371356425880178, guid: 6f726e30c7c6a954da0f7ff49389a853, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1567371356425880178, guid: 6f726e30c7c6a954da0f7ff49389a853, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 31
+      objectReference: {fileID: 0}
     - target: {fileID: 1567371356453197452, guid: 6f726e30c7c6a954da0f7ff49389a853, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -22462,14 +22478,14 @@ PrefabInstance:
     - target: {fileID: 1567371356711797717, guid: 6f726e30c7c6a954da0f7ff49389a853, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 009ae27876f402b4a94c1f9ad06e241a, type: 3}
+      objectReference: {fileID: 21300000, guid: a31d6df776cd8fa43bd897bd993b4fd7, type: 3}
     - target: {fileID: 1567371356711797718, guid: 6f726e30c7c6a954da0f7ff49389a853, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1567371356847330627, guid: 6f726e30c7c6a954da0f7ff49389a853, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -342
+      value: -346
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f726e30c7c6a954da0f7ff49389a853, type: 3}
