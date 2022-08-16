@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
@@ -41,10 +42,18 @@ public class LevelManager : MonoBehaviour
         
     }
 
-    private void ResetLevel() 
+    public void ResetLevel() 
     {
         PlayerPrefs.DeleteKey("curLevel");
         PlayerPrefs.DeleteKey("passedLevel");
+        SceneManager.LoadScene("MainMenuScene", LoadSceneMode.Single);
     } 
+
+    public void OpenFullLevel()
+    {
+        PlayerPrefs.SetInt("curLevel", 10);
+        PlayerPrefs.SetInt("passedLevel", 10);
+        SceneManager.LoadScene("MainMenuScene", LoadSceneMode.Single);
+    }
 
 }
