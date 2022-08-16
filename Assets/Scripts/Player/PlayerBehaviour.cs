@@ -60,7 +60,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         var direction = gate.transform.position - transform.position;
 
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90;
 
         arrow.transform.eulerAngles = Vector3.forward * angle;
         
