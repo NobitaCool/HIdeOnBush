@@ -23,7 +23,6 @@ public class LevelManager : MonoBehaviour
     public void UpdateLevel()
     {
         if(PlayerPrefs.HasKey("passedLevel")) passedLevel = PlayerPrefs.GetInt("passedLevel");
-        Debug.Log( "Passed level: " + passedLevel);
         
         for (int i = 0; i < level_Btns.Length; i++)
         {

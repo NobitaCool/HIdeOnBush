@@ -62,9 +62,8 @@ public class PlayerBehaviour : MonoBehaviour
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        Debug.Log(angle);
-
         arrow.transform.eulerAngles = Vector3.forward * angle;
+        
         arrow.transform.localScale = (transform.localScale == Vector3.one) ? Vector3.one : new Vector3(-1, 1, 1);
     }
 
