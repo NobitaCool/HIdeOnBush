@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
         #endregion
         #region Audio
             [SerializeField] private AudioSource backgroundSound;
+            [SerializeField] private AudioSource victorySound;
         #endregion
         #region const
             private const int TOTAL_LEVEL = 10;
@@ -89,6 +90,8 @@ public class GameManager : MonoBehaviour
         if(nextLevel > TOTAL_LEVEL)
         {
             victoryUI.SetActive(true);
+            backgroundSound.Stop();
+            if(!victorySound.isPlaying) victorySound.Play();
             PlayerPrefs.Save();
             return;
         }
